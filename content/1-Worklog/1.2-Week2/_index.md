@@ -5,53 +5,33 @@ weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 2 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Refactor and optimize the Frontend interface of the SmartDocsAI project.
+* Research and practice with Amazon S3, including Bucket and Object management, deploying Static Website Hosting, and utilizing Amazon CloudFront for content delivery.
+* Study Amazon RDS, database management features, and the deployment, backup, and restore pipelines.
+* Explore application scaling mechanisms on AWS via Amazon EC2 Auto Scaling, Launch Templates, Elastic Load Balancers, and Target Groups.
+* Enhance knowledge of AI and AWS by researching and writing a tech blog post to share with the AWS Study Group community.
+* Complete the attendance report for the Cloud Architect event, update the internship worklogs, and synchronize all Workshop source code and documentation to GitHub.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks to Implement This Week:
+
+| Day | Tasks | Start Date | Completion Date | Documentation / Resources |
+| --- | --- | --- | --- | --- |
+| Mon | - Refactor Frontend code for the SmartDocsAI project <br> - Research and practice with Amazon S3 (Simple Storage Service): <br>&emsp; + Amazon S3, S3 Bucket, and S3 Object concepts <br>&emsp; + Creating buckets and uploading data <br>&emsp; + Configuring static website hosting, blocking public access, and making objects public with a personal sample project <br>&emsp; + Utilizing CloudFront to accelerate the static website | 29/06/2026 | 30/06/2026 | [Amazon S3 Guide](https://000057.awsstudygroup.com/vi/) |
+| Tue | - Research theories: <br>&emsp; + Amazon Relational Database Service (Amazon RDS) concepts <br>&emsp; + Management features of Amazon RDS <br> - Read documentation on preparation, deployment, and backup-restore pipelines on Amazon RDS | 01/07/2026 | 01/07/2026 | [Amazon RDS Guide](https://000005.awsstudygroup.com/vi/) |
+| Wed | - Read documentation on application scaling with Amazon EC2 Auto Scaling, understanding core concepts: <br>&emsp; + Auto Scaling Group <br>&emsp; + Launch Template <br>&emsp; + Elastic Load Balancer <br>&emsp; + Target Group | 02/07/2026 | 02/07/2026 | [Amazon EC2 Auto Scaling](https://000006.awsstudygroup.com/vi/) |
+| Thu | - Research, read references, and write a Blog post to publish on the "AWS Study Group" FB community: *How Amazon Bedrock catches AI-generated phishing* <br> - Update the attendance report for the Tech Game Show - Cloud Architect (held on 20/06/2026) | 03/07/2026 | 03/07/2026 | https://aws.amazon.com/vi/blogs/machine-learning/how-amazon-bedrock-catches-ai-generated-phishing/ |
+| Fri | - Refactor and update the Workshop worklog documentation on Git: <br>&emsp; + Complete and finalize worklogs for Week 1 and Week 2 | 04/07/2026 | 04/07/2026 | Personal GitHub Repository |
 
 
 ### Week 2 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Successfully refactored the Frontend interface of the SmartDocsAI project, improving layout structure and user experience.
+* Comprehended the operational principles of Amazon S3, created and managed S3 Buckets, uploaded data objects, configured Static Website Hosting, managed access permissions, and integrated Amazon CloudFront for optimized content delivery.
+* Mastered foundational knowledge of Amazon RDS, including database management capabilities, deployment procedures, backup strategies, and data restoration (Restore).
+* Explored infrastructure scaling mechanisms using Amazon EC2 Auto Scaling, understanding the practical roles of Auto Scaling Groups, Launch Templates, Elastic Load Balancers (ELB), and Target Groups in ensuring high availability and application scalability.
+* Completed the technical blog post titled "How Amazon Bedrock Catches AI-Generated Phishing" and published it on the AWS Study Group community, consolidating knowledge in AI and security on AWS.
+* Finalized and updated the attendance report for the "Cloud Architect" Tech Game Show, consolidating key insights and technical takeaways from the event.
+* Completed and updated the Workshop Worklog repository, covering work summaries for both Week 1 and Week 2, and synchronized all source files and assets to GitHub.
