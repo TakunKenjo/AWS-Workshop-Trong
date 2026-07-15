@@ -15,21 +15,21 @@
     <title>Blog 2 :: Internship Report</title>
 
     
-    <link href="/css/nucleus.css?1783233443" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1783233443" rel="stylesheet">
-    <link href="/css/hybrid.css?1783233443" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1783233443" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1783233443" rel="stylesheet">
-    <link href="/css/auto-complete.css?1783233443" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1783233443" rel="stylesheet">
-    <link href="/css/theme.css?1783233443" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1783233443" rel="stylesheet">
+    <link href="/css/nucleus.css?1784102150" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1784102150" rel="stylesheet">
+    <link href="/css/hybrid.css?1784102150" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1784102150" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1784102150" rel="stylesheet">
+    <link href="/css/auto-complete.css?1784102150" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1784102150" rel="stylesheet">
+    <link href="/css/theme.css?1784102150" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1784102150" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1783233443" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1784102150" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1783233443"></script>
+    <script src="/js/jquery-3.3.1.min.js?1784102150"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1783233443"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1783233443"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1784102150"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1784102150"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1783233443"></script>
+<script type="text/javascript" src="/js/search.js?1784102150"></script>
  
   </div>
 
@@ -825,7 +825,7 @@
     <br>
     <b> Last Updated </b> <br>
     <i>
-        <font color=orange>05-07-2026</font>
+        <font color=orange>15-07-2026</font>
     </i>
 </left>
 <left>
@@ -887,7 +887,14 @@
                 </div>
                 
                     <div class="progress">
-  <div class="wrapper"><nav id="TableOfContents"></nav></div>
+  <div class="wrapper"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#key-highlights">KEY HIGHLIGHTS</a></li>
+    <li><a href="#real-world-scenario">REAL-WORLD SCENARIO</a></li>
+    <li><a href="#conclusion">CONCLUSION</a></li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav></div>
 </div>
 
                 
@@ -910,30 +917,67 @@
 
 
 
-	
-<div
-  class="notices warning"
-  
->
-  <p>⚠️ <strong>Note:</strong> The information below is for reference purposes only. Please <strong>do not copy verbatim</strong> for your report, including this warning.</p>
-
-</div>
-
-<h1 id="session-policies-in-amazon-eks-pod-identity">SESSION POLICIES IN AMAZON EKS POD IDENTITY</h1>
-<p>Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.</p>
-<p>Key points to know:</p>
+	<h1 id="amazon-bedrock-baseline-architecture-in-an-aws-landing-zone-a-standard-architecture-for-secure-generative-ai-deployment-in-the-enterprise">AMAZON BEDROCK BASELINE ARCHITECTURE IN AN AWS LANDING ZONE: A STANDARD ARCHITECTURE FOR SECURE GENERATIVE AI DEPLOYMENT IN THE ENTERPRISE</h1>
+<p>As organizations begin adopting Generative AI into their business operations, building applications powered by Large Language Models (LLMs) is becoming increasingly common. Amazon Bedrock has become a leading choice thanks to its ability to provide powerful foundation models through a single API. </br></p>
+<p>However, the biggest challenges of deploying Generative AI at enterprise scale are governance, cost management, and security.</p>
+<p>In practice, these AI applications often require access to sensitive internal data (through Knowledge Bases or Retrieval-Augmented Generation (RAG) mechanisms).</p>
+<p>Without a well-designed network architecture and fine-grained access control from the beginning, organizations may face data leakage risks, difficulty controlling AI model usage costs across departments, and a lack of centralized monitoring.</p>
+<p>To address these challenges, AWS introduces the <strong>Amazon Bedrock Baseline Architecture</strong> within an <strong>AWS Landing Zone</strong>. This solution enables organizations to establish strong network security boundaries, implement fine-grained access control, and centrally manage AI/ML capabilities in a secure and efficient manner.</p>
+<p>In practice, this architecture leverages the capabilities of <strong>AWS Organizations</strong>, <strong>Amazon VPC Lattice</strong>, <strong>VPC Endpoints</strong>, <strong>AWS Identity and Access Management (IAM)</strong>, and <strong>Amazon CloudWatch</strong> to build a secure multi-account infrastructure for Generative AI applications.</p>
+<h2 id="key-highlights">KEY HIGHLIGHTS</h2>
 <ul>
-<li>A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.</li>
-<li>Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.</li>
-<li>Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.</li>
-<li>Supports both same-account and cross-account (via IAM role chaining).</li>
-<li>Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.</li>
-<li>Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.</li>
+<li>
+<p><strong>Secure Multi-Account Architecture (Multi-Account Setup):</strong><br>
+The environment is divided into dedicated accounts (Service Network Account, Generative AI Account, and Workload Accounts). This isolates workloads, minimizes the impact of security incidents if one account is compromised, and simplifies cost management.</p>
+</li>
+<li>
+<p><strong>Secure Connectivity with Amazon VPC Lattice:</strong><br>
+Amazon VPC Lattice manages communication between AI applications and services across multiple AWS accounts without requiring complex networking configurations such as VPC Peering or Transit Gateway. It also supports strict service-level authentication policies.</p>
+</li>
+<li>
+<p><strong>Preventing Data Leakage with VPC Endpoints:</strong><br>
+All traffic between applications and Amazon Bedrock is routed through AWS private networking using <strong>PrivateLink (VPC Interface Endpoints)</strong>, ensuring that sensitive data never traverses the public Internet.</p>
+</li>
+<li>
+<p><strong>Fine-Grained Access Control:</strong><br>
+IAM Policies and VPC Lattice Authentication Policies work together to define exactly which teams or applications are allowed to access specific foundation models (for example, restricting expensive premium models to designated testing teams).</p>
+</li>
+<li>
+<p><strong>Centralized Monitoring and Auditing:</strong><br>
+Integration with Amazon CloudWatch, AWS CloudTrail, and VPC Lattice Access Logs provides complete visibility into Bedrock API activity, enabling performance monitoring, anomaly detection, and accurate cost allocation.</p>
+</li>
 </ul>
-<p>This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).</p>
-<p>&hellip;Image&hellip;</p>
-<p>&hellip;Link&hellip;</p>
-<p>&hellip;Guide&hellip;</p>
+<h2 id="real-world-scenario">REAL-WORLD SCENARIO</h2>
+<p>Suppose a large financial organization wants to deploy AI assistants (AI Agents) for multiple departments (Development, Testing, and Production) to analyze confidential internal reports while maintaining centralized control over Amazon Bedrock usage costs.</p>
+<p>The standardized Landing Zone architecture is designed as follows:</p>
+<ul>
+<li><strong>Workload Account (Application Environment) → Service Network Account (VPC Lattice Service) → Generative AI Account (VPC Endpoints &amp; Proxy Layer) → Amazon Bedrock</strong></li>
+</ul>
+<p><strong>Within this architecture:</strong></p>
+<ul>
+<li>
+<p><strong>Workload Accounts:</strong> Host client applications or chatbots for individual departments. Whenever AI services are required, requests are sent through the centralized service network.</p>
+</li>
+<li>
+<p><strong>Service Network Account:</strong> Acts as the organization&rsquo;s networking hub. Amazon VPC Lattice evaluates authentication policies to determine whether requests are authorized.</p>
+</li>
+<li>
+<p><strong>Generative AI Account:</strong> Centrally manages AI/ML resources. This account provides a proxy layer and securely connects to Amazon Bedrock through private VPC Endpoints.</p>
+</li>
+<li>
+<p><strong>Amazon Bedrock:</strong> Receives requests from internal endpoints, processes them using foundation models securely, and returns responses to the applications.</p>
+</li>
+<li>
+<p><strong>CloudWatch &amp; CloudTrail:</strong> Continuously collect logs and monitoring information throughout the entire workflow to ensure transparency, auditing, and data security.</p>
+</li>
+</ul>
+<h2 id="conclusion">CONCLUSION</h2>
+<p>One aspect that stands out about the Amazon Bedrock Baseline Architecture is how AWS systematically addresses enterprise AI adoption. Instead of allowing each project to connect directly to Amazon Bedrock independently, centralizing Generative AI capabilities within a dedicated AWS account provides consistency, governance, and easier management.</p>
+<p>Within this architecture, using Amazon VPC Lattice as the central traffic routing and authentication layer is an intelligent design choice that significantly reduces networking complexity for cloud and security engineers.</p>
+<p>In my opinion, this is an essential architecture to understand if you are pursuing a career as a <strong>Cloud Architect</strong> or <strong>Security Engineer</strong> working with Generative AI on AWS, as it directly addresses the most important enterprise challenges: <strong>Governance, Security, and Cost Optimization</strong>.</p>
+<p>This AWS blog clearly demonstrates that while building an AI application is relatively straightforward, creating a secure, scalable, and enterprise-compliant AI platform is the real challenge.</p>
+<h2 id="reference">Reference</h2>
+<p><a href="https://aws.amazon.com/vi/blogs/architecture/amazon-bedrock-baseline-architecture-in-an-aws-landing-zone/">https://aws.amazon.com/vi/blogs/architecture/amazon-bedrock-baseline-architecture-in-an-aws-landing-zone/</a></p>
 
 
 
@@ -1590,19 +1634,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1783233443"></script>
-    <script src="/js/perfect-scrollbar.min.js?1783233443"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1783233443"></script>
-    <script src="/js/jquery.sticky.js?1783233443"></script>
-    <script src="/js/featherlight.min.js?1783233443"></script>
-    <script src="/js/highlight.pack.js?1783233443"></script>
+    <script src="/js/clipboard.min.js?1784102150"></script>
+    <script src="/js/perfect-scrollbar.min.js?1784102150"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1784102150"></script>
+    <script src="/js/jquery.sticky.js?1784102150"></script>
+    <script src="/js/featherlight.min.js?1784102150"></script>
+    <script src="/js/highlight.pack.js?1784102150"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1783233443"></script>
-    <script src="/js/learn.js?1783233443"></script>
-    <script src="/js/hugo-learn.js?1783233443"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1784102150"></script>
+    <script src="/js/learn.js?1784102150"></script>
+    <script src="/js/hugo-learn.js?1784102150"></script>
 
-    <link href="/mermaid/mermaid.css?1783233443" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1783233443"></script>
+    <link href="/mermaid/mermaid.css?1784102150" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1784102150"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

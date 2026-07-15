@@ -15,21 +15,21 @@
     <title>Blog 1 :: Internship Report</title>
 
     
-    <link href="/css/nucleus.css?1783233443" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1783233443" rel="stylesheet">
-    <link href="/css/hybrid.css?1783233443" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1783233443" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1783233443" rel="stylesheet">
-    <link href="/css/auto-complete.css?1783233443" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1783233443" rel="stylesheet">
-    <link href="/css/theme.css?1783233443" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1783233443" rel="stylesheet">
+    <link href="/css/nucleus.css?1784102150" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1784102150" rel="stylesheet">
+    <link href="/css/hybrid.css?1784102150" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1784102150" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1784102150" rel="stylesheet">
+    <link href="/css/auto-complete.css?1784102150" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1784102150" rel="stylesheet">
+    <link href="/css/theme.css?1784102150" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1784102150" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1783233443" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1784102150" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1783233443"></script>
+    <script src="/js/jquery-3.3.1.min.js?1784102150"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1783233443"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1783233443"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1784102150"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1784102150"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1783233443"></script>
+<script type="text/javascript" src="/js/search.js?1784102150"></script>
  
   </div>
 
@@ -825,7 +825,7 @@
     <br>
     <b> Last Updated </b> <br>
     <i>
-        <font color=orange>05-07-2026</font>
+        <font color=orange>15-07-2026</font>
     </i>
 </left>
 <left>
@@ -887,7 +887,18 @@
                 </div>
                 
                     <div class="progress">
-  <div class="wrapper"><nav id="TableOfContents"></nav></div>
+  <div class="wrapper"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#challenges-of-ai-phishing">Challenges of AI Phishing</a></li>
+    <li><a href="#overview-of-the-five-step-analysis-pipeline-with-amazon-bedrock">Overview of the Five-Step Analysis Pipeline with Amazon Bedrock</a></li>
+    <li><a href="#deployment-and-operational-characteristics">Deployment and Operational Characteristics</a></li>
+    <li><a href="#measurable-results">Measurable Results</a></li>
+    <li><a href="#looking-ahead">Looking Ahead</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav></div>
 </div>
 
                 
@@ -910,30 +921,69 @@
 
 
 
-	
-<div
-  class="notices warning"
-  
->
-  <p>⚠️ <strong>Note:</strong> The information below is for reference purposes only. Please <strong>do not copy verbatim</strong> for your report, including this warning.</p>
-
-</div>
-
-<h1 id="session-policies-in-amazon-eks-pod-identity">SESSION POLICIES IN AMAZON EKS POD IDENTITY</h1>
-<p>Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.</p>
-<p>Key points to know:</p>
+	<h1 id="how-amazon-bedrock-stops-ai-generated-phishing-attacks">HOW AMAZON BEDROCK STOPS AI-GENERATED PHISHING ATTACKS</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Social engineering through phishing remains one of the most common techniques used by cybercriminals. However, the rise of Generative AI has elevated this threat to an entirely new level. Attackers now combine large language models with publicly available intelligence (OSINT) gathered from social media to generate thousands of unique phishing emails that are highly personalized and capable of closely imitating the communication style of trusted partners. </br></p>
+<p>Previously, traditional email security filters relied on keyword matching, spelling mistakes, or suspicious domain detection to block malicious emails effectively. However, as AI can now generate grammatically correct and contextually accurate messages, these traditional indicators have become ineffective. Organizations therefore require a smarter defense strategy that focuses on behavioral analysis and contextual understanding rather than surface-level text scanning.</p>
+<p>In this article, we will explore how to build a next-generation phishing detection system powered by Amazon Bedrock. The article walks through a five-stage analysis pipeline, the AWS services involved, and how this architecture protects enterprise mailboxes against sophisticated phishing attacks.</p>
+<h2 id="challenges-of-ai-phishing">Challenges of AI Phishing</h2>
+<p>AI-generated phishing emails operate in an extremely sophisticated psychological manipulation environment. They no longer contain generic greetings or obvious translation mistakes. Instead, they can accurately reference ongoing company projects, mention the correct department names, and make requests that appear completely legitimate within the business context.</br></p>
+<p>Traditional email filtering solutions based on lexical pattern matching rely on static indicators such as suspicious keywords or malformed writing structures. Because AI-generated content is natural, fluent, and does not follow previously known phishing patterns, these attacks can easily bypass conventional security gateways. Modern defense systems therefore need to shift toward analyzing dynamic signals such as communication style deviations and contextual appropriateness.</p>
+<h2 id="overview-of-the-five-step-analysis-pipeline-with-amazon-bedrock">Overview of the Five-Step Analysis Pipeline with Amazon Bedrock</h2>
+<p>This anti-phishing solution uses Amazon Bedrock to access advanced foundation models while integrating built-in safety mechanisms to analyze emails in real time without exposing sensitive information. The processing workflow consists of five core steps:</p>
 <ul>
-<li>A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.</li>
-<li>Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.</li>
-<li>Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.</li>
-<li>Supports both same-account and cross-account (via IAM role chaining).</li>
-<li>Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.</li>
-<li>Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.</li>
+<li>
+<p><strong>Step 1</strong>: Input filtering and preprocessing with Amazon Bedrock Guardrails. Before a newly received email is analyzed by the AI model, it first passes through Amazon Bedrock Guardrails. This layer performs preliminary filtering by detecting and masking sensitive personally identifiable information (PII) and clearly malicious content, ensuring the data is safely normalized before further processing. </br></p>
+</li>
+<li>
+<p><strong>Step 2</strong>: Context-aware prompt construction with Amazon Bedrock Knowledge Bases. The system does not evaluate emails in isolation. Using Amazon Bedrock Knowledge Bases, the pipeline retrieves information from the sender&rsquo;s behavioral profile (sender baseline tracker) and organizational context to build a comprehensive analysis prompt. The prompt includes the current email, previous communication history, and examples of known phishing attacks. </br></p>
+</li>
+<li>
+<p><strong>Step 3</strong>: High-performance AI analysis. A foundation model (such as Claude 3.5 Sonnet or equivalent models) hosted on Amazon Bedrock processes the enriched prompt. During inference, Guardrails continue monitoring the model&rsquo;s output to prevent hallucinations while ensuring compliance with the organization&rsquo;s AI safety policies. </br></p>
+</li>
+<li>
+<p><strong>Step 4</strong>: Multi-factor risk scoring. After completing the analysis, the system automatically calculates three component scores, including content anomaly score, sender behavior deviation score, and contextual inconsistency score. These values are then combined into a unified risk score ranging from 0 to 100. </br></p>
+</li>
+<li>
+<p><strong>Step 5</strong>: Automatic classification and routing. Based on the final risk score, the system performs one of the following actions:</p>
+<ul>
+<li><strong>Below 30 (Safe):</strong> The email is delivered directly to the employee&rsquo;s inbox.</li>
+<li><strong>From 30 to below 70 (Suspicious):</strong> The email is quarantined for manual review by the cybersecurity team.</li>
+<li><strong>70 and above (Dangerous):</strong> The email is completely blocked before reaching the end user.</li>
 </ul>
-<p>This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).</p>
-<p>&hellip;Image&hellip;</p>
-<p>&hellip;Link&hellip;</p>
-<p>&hellip;Guide&hellip;</p>
+</li>
+</ul>
+<p><img src="/images/3-Blog/blog1.jpg" alt="Illustration"></p>
+<h2 id="deployment-and-operational-characteristics">Deployment and Operational Characteristics</h2>
+<p>This proactive defense model provides enterprises with both flexibility and strong security:</p>
+<ul>
+<li>
+<p><strong>Strict Data Protection:</strong> Amazon Bedrock Guardrails protect sensitive information throughout the inference process while complying with responsible AI standards.</p>
+</li>
+<li>
+<p><strong>Scalability:</strong> The processing pipeline is built on Amazon Bedrock&rsquo;s fully managed API architecture, allowing the system to automatically scale and analyze millions of emails per day without requiring organizations to manage complex GPU infrastructure.</p>
+</li>
+</ul>
+<h2 id="measurable-results">Measurable Results</h2>
+<p>Applying this multi-layer AI analysis solution with Amazon Bedrock delivers significant improvements to enterprise cybersecurity:</p>
+<ul>
+<li>
+<p>Reduce detection time by accurately identifying sophisticated spear-phishing attacks immediately after emails arrive.</p>
+</li>
+<li>
+<p>Reduce false positives by comparing emails against the sender&rsquo;s real communication profile, preventing legitimate business emails from being mistakenly quarantined.</p>
+</li>
+<li>
+<p>Improve Security Operations Center (SOC) efficiency by fully automating initial analysis and classification, allowing cybersecurity professionals to focus on handling complex incidents instead of manually reviewing thousands of suspicious emails every day.</p>
+</li>
+</ul>
+<h2 id="looking-ahead">Looking Ahead</h2>
+<p>The battle against phishing is rapidly evolving into an AI arms race between attackers and defenders. By shifting the focus from surface-level keyword inspection to deep behavioral and contextual analysis, organizations can stay one step ahead of increasingly sophisticated threats.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This article demonstrates how to build a next-generation phishing detection system using Amazon Bedrock together with Amazon Bedrock Guardrails and Amazon Bedrock Knowledge Bases. This architecture delivers powerful contextual analysis, accurate risk scoring, and automated email routing to better protect enterprise digital assets.</p>
+<p>To learn more about building AI-powered cybersecurity applications, visit the AWS Architecture Center. To get started with Amazon Bedrock, see <em>Getting Started with Amazon Bedrock</em>.</p>
+<h2 id="reference">Reference</h2>
+<p><a href="https://aws.amazon.com/vi/blogs/machine-learning/how-amazon-bedrock-catches-ai-generated-phishing/">https://aws.amazon.com/vi/blogs/machine-learning/how-amazon-bedrock-catches-ai-generated-phishing/</a></p>
 
 
 
@@ -1587,19 +1637,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1783233443"></script>
-    <script src="/js/perfect-scrollbar.min.js?1783233443"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1783233443"></script>
-    <script src="/js/jquery.sticky.js?1783233443"></script>
-    <script src="/js/featherlight.min.js?1783233443"></script>
-    <script src="/js/highlight.pack.js?1783233443"></script>
+    <script src="/js/clipboard.min.js?1784102150"></script>
+    <script src="/js/perfect-scrollbar.min.js?1784102150"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1784102150"></script>
+    <script src="/js/jquery.sticky.js?1784102150"></script>
+    <script src="/js/featherlight.min.js?1784102150"></script>
+    <script src="/js/highlight.pack.js?1784102150"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1783233443"></script>
-    <script src="/js/learn.js?1783233443"></script>
-    <script src="/js/hugo-learn.js?1783233443"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1784102150"></script>
+    <script src="/js/learn.js?1784102150"></script>
+    <script src="/js/hugo-learn.js?1784102150"></script>
 
-    <link href="/mermaid/mermaid.css?1783233443" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1783233443"></script>
+    <link href="/mermaid/mermaid.css?1784102150" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1784102150"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
