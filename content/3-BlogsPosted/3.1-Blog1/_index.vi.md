@@ -30,7 +30,7 @@ Giải pháp phòng chống lừa đảo này sử dụng Amazon Bedrock để t
   - Dưới 30 điểm (An toàn): Email được chuyển thẳng vào hộp thư đến của nhân viên.
   - Từ 30 đến dưới 70 điểm (Nghi ngờ): Email bị đưa vào khu vực cách ly (quarantine) để đội ngũ an ninh mạng kiểm tra thủ công.
   - Từ 70 điểm trở lên (Nguy hiểm): Email bị chặn đứng hoàn toàn (block) trước khi tiếp cận người dùng.
-![Hình minh họa](/images/3-Blog/blog1.jpg)
+![Hình minh họa](/images/3-BlogsPosted/3.1-Blog1/blog1.png)
 
 ## Đặc điểm triển khai và vận hành
 

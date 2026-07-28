@@ -18,6 +18,17 @@ Trong quá trình thực tập, em đã tham gia _ events, với mỗi event là
 
 &emsp;**Vai trò trong sự kiện:** Người tham dự (khán giả)
 
+### [Event 2](4.2-Event2/)
+&emsp;**Tên sự kiện:** Agentic AI Build Week powered by GenAI Fund
+
+&emsp;**Thời gian:** 09:00 ngày 25/07/2026
+
+&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
+
+&emsp;**Vai trò trong sự kiện:** Người tham dự (khán giả)
+
+
+
 
 
 

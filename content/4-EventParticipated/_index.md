@@ -17,3 +17,12 @@ During my internship, I participated in _ events. Each one was a memorable exper
 **Venue:** 26th Floor, Bitexco Financial Tower, 2 Hai Trieu Street, Sai Gon Ward, Ho Chi Minh City, Vietnam
 
 **Role in the Event:** Attendee (Audience Member)
+
+### [Event 2](4.2-Event2/)
+**Event Name:** Agentic AI Build Week powered by GenAI Fund
+
+**Time:** 9:00 AM, July 25, 2026
+
+**Venue:** 26th Floor, Bitexco Financial Tower, 2 Hai Trieu Street, Sai Gon Ward, Ho Chi Minh City, Vietnam
+
+**Role in the Event:** Attendee (Audience Member)

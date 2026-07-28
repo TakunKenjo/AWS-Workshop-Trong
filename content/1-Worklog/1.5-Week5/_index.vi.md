@@ -1,59 +1,36 @@
 ---
+
 title: "Worklog Tuần 5"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 5:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hoàn thiện báo cáo Workshop về quy trình triển khai Frontend và Backend trên AWS.
+* Hoàn thiện tài liệu hướng dẫn triển khai Amazon S3, Static Website Hosting, CloudFront và CodePipeline.
+* Hoàn thiện tài liệu hướng dẫn triển khai API Gateway và tự động triển khai Lambda bằng CodePipeline.
+* Cập nhật file README mô tả rõ cấu trúc mã nguồn Frontend của project nhóm.
+* Kiểm tra và test lại project, hạn chế lỗi phát sinh trong quá trình triển khai.
+* Review và chỉnh sửa báo cáo Workshop cùng các thành viên trong nhóm.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc                                                                                                                                                                                                                                                       | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | -------------- |
+| 2   | - Chỉnh sửa file README để mô tả rõ src Frontend Project nhóm <br> - Viết hoàn thiện báo cáo Workshop: 5.1.1: Mô tả kiến trúc Frontend <br> - Viết hoàn thiện báo cáo Workshop <br> - Test lại project nhóm, tránh lỗi phát sinh                                | 20/07/2026   | 20/07/2026      |                |
+| 3   | - Viết hoàn thiện báo cáo Workshop: 5.2-Prerequisite: <br>  + 5.2.1: Chuẩn bị src code <br>  + 5.2.2: Chuẩn bị tài khoản AWS <br>  + 5.2.3: Tạo IAM User                                                                                                        | 21/07/2026   | 21/07/2026      |                |
+| 4   | - Viết hoàn thiện báo cáo Workshop: 5.3-Frontend-deployment <br>  + 5.3.1-create-S3-bucket <br>  + 5.3.2-enable-static-web-hosting <br>  + 5.3.3-config-block-public-access-settings                                                                            | 22/07/2026   | 22/07/2026      |                |
+| 5   | - Viết hoàn thiện báo cáo Workshop: 5.3-Frontend-deployment <br>  + 5.3.4-config-bucket-policy-public-object-access <br>  + 5.3.5-website-verification <br>  + 5.3.6-accelerating-website-performance-with-cloudFront <br>  + 5.3.7-codepipeline-to-S3-frontend | 23/07/2026   | 23/07/2026      |                |
+| 6   | - Viết hoàn thiện báo cáo Workshop: 5.4-Backend-deployment <br>  + 5.4.6-implementing-frontend-API-gateway-integration <br>  + 5.4.7-automating-lambda-deployment-with-codePipeline                                                                                                               | 24/07/2026   | 24/07/2026      |                |
+| 7   | - Họp nhóm: <br>  + Review tiến độ công việc <br>  + Đọc và sửa lỗi báo cáo giữa các thành viên trong nhóm                                                                                                                                                      | 25/07/2026   | 25/07/2026      |                |
 
 ### Kết quả đạt được tuần 5:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hoàn thiện file README mô tả cấu trúc mã nguồn Frontend của project nhóm.
+* Hoàn thiện các nội dung báo cáo Workshop từ 5.1.1 đến 5.3.7, bao gồm kiến trúc Frontend và quy trình triển khai Frontend trên AWS.
+* Hoàn thiện nội dung hướng dẫn tích hợp Frontend với API Gateway và tự động triển khai AWS Lambda bằng CodePipeline.
+* Test lại project nhóm và kiểm tra các lỗi phát sinh trong quá trình triển khai.
+* Họp nhóm, review tiến độ và phối hợp chỉnh sửa lỗi trong báo cáo giữa các thành viên.

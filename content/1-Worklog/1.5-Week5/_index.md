@@ -1,57 +1,36 @@
 ---
+
 title: "Week 5 Worklog"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 5 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Complete the Workshop report on the process of deploying Frontend and Backend on AWS.
+* Complete the documentation for deploying Amazon S3, Static Website Hosting, CloudFront, and CodePipeline.
+* Complete the documentation for deploying API Gateway and automatically deploying Lambda using CodePipeline.
+* Update the README file to clearly describe the Frontend source code structure of the group project.
+* Check and test the project again to minimize errors that may occur during the deployment process.
+* Review and revise the Workshop report with team members.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks to be implemented this week:
 
+| Day | Tasks                                                                                                                                                                                                                                                        | Start Date | Completion Date | Reference Materials |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ------------------- |
+| Mon   | - Edit the README file to clearly describe the Frontend src of the group project <br> - Complete the Workshop report: 5.1.1: Frontend Architecture Description <br> - Complete the Workshop report <br> - Retest the group project to avoid potential errors | 20/07/2026 | 20/07/2026      |                     |
+| Tue   | - Complete the Workshop report: 5.2-Prerequisite: <br>  + 5.2.1: Prepare the src code <br>  + 5.2.2: Prepare the AWS account <br>  + 5.2.3: Create IAM User                                                                                                  | 21/07/2026 | 21/07/2026      |                     |
+| Wed   | - Complete the Workshop report: 5.3-Frontend-deployment <br>  + 5.3.1-create-S3-bucket <br>  + 5.3.2-enable-static-web-hosting <br>  + 5.3.3-config-block-public-access-settings                                                                             | 22/07/2026 | 22/07/2026      |                     |
+| Thu   | - Complete the Workshop report: 5.3-Frontend-deployment <br>  + 5.3.4-config-bucket-policy-public-object-access <br>  + 5.3.5-website-verification <br>  + 5.3.6-accelerating-website-performance-with-cloudFront <br>  + 5.3.7-codepipeline-to-S3-frontend  | 23/07/2026 | 23/07/2026      |                     |
+| Fri   | - Complete the Workshop report: 5.4-Backend-deployment <br>  + 5.4.6-implementing-frontend-API-gateway-integration <br>  + 5.4.7-automating-lambda-deployment-with-codePipeline                                                                                                            | 24/07/2026 | 24/07/2026      |                     |
+| Sat   | - Team meeting: <br>  + Review work progress <br>  + Read and fix report errors among team members                                                                                                                                                           | 25/07/2026 | 25/07/2026      |                     |
 
-### Week 5 Achievements:
+### Week 5 Results Achieved:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Completed the README file describing the Frontend source code structure of the group project.
+* Completed the Workshop report content from 5.1.1 to 5.3.7, including the Frontend architecture and the Frontend deployment process on AWS.
+* Completed the documentation on integrating the Frontend with API Gateway and automatically deploying AWS Lambda using CodePipeline.
+* Retested the group project and checked for errors that occurred during the deployment process.
+* Held a team meeting, reviewed work progress, and collaborated on fixing errors in the report among team members.
