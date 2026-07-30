@@ -15,21 +15,21 @@
     <title>Automating Lambda Deployment with CodePipeline :: Internship Report</title>
 
     
-    <link href="/css/nucleus.css?1785221383" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785221383" rel="stylesheet">
-    <link href="/css/hybrid.css?1785221383" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785221383" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785221383" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785221383" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785221383" rel="stylesheet">
-    <link href="/css/theme.css?1785221383" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785221383" rel="stylesheet">
+    <link href="/css/nucleus.css?1785416443" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785416443" rel="stylesheet">
+    <link href="/css/hybrid.css?1785416443" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785416443" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785416443" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785416443" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785416443" rel="stylesheet">
+    <link href="/css/theme.css?1785416443" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785416443" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1785221383" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1785416443" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1785221383"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785416443"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785221383"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785221383"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785416443"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785416443"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785221383"></script>
+<script type="text/javascript" src="/js/search.js?1785416443"></script>
  
   </div>
 
@@ -1291,7 +1291,7 @@
     <br>
     <b> Last Updated </b> <br>
     <i>
-        <font color=orange>28-07-2026</font>
+        <font color=orange>30-07-2026</font>
     </i>
 </left>
 <left>
@@ -1394,11 +1394,20 @@
 	<h3 id="1-check-lambda-function">1. Check Lambda Function</h3>
 <ul>
 <li>Search for <code>Lambda</code> in the <strong>AWS Console</strong> search bar.
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/22.png" alt="find-lambda"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/22.png" alt="find-lambda"  />
+</li>
 <li>Verify that the previously created <strong>smartdocai Function</strong> exists, then click on that function.
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/23.png" alt="function"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/23.png" alt="function"  />
+</li>
 <li>Check the <strong>Image URI</strong>.
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/24.png" alt="image-URI"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/24.png" alt="image-URI"  />
+</li>
 </ul>
 <h3 id="2-create-codepipeline-to-connect-to-lambda">2. Create CodePipeline to Connect to Lambda</h3>
 <p><strong>Step 1: Create backend/buildspec.yml (CI/CD Automated Testing &amp; Hard Fail Workflow)</strong></p>
@@ -1440,23 +1449,35 @@
 </span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">docker push $REPOSITORY_URI:$IMAGE_TAG</span>
 </span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">echo &#34;=== Phase 7: Deploying Updated Image to AWS Lambda ===&#34;</span>
 </span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">aws lambda update-function-code --function-name $LAMBDA_FUNCTION_NAME --image-uri $REPOSITORY_URI:$IMAGE_TAG</span>
-</span></span></code></pre></div><p><img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/25.png" alt="file-buildspec"></p>
+</span></span></code></pre></div><p>
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/25.png" alt="file-buildspec"  />
+</p>
 <p><strong>Step 2: Create CodePipeline</strong></p>
 <ul>
 <li>Access <strong>CodePipeline</strong> and click the <strong>Create pipeline</strong> button.
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/26.png" alt="codepipeline"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/26.png" alt="codepipeline"  />
+</li>
 <li>In the Choose creation option UI:
 <ul>
 <li>Select <strong>Build custom pipeline</strong></li>
 <li>Click <strong>Next</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/27.png" alt="choose-creation-option"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/27.png" alt="choose-creation-option"  />
+</li>
 </ul>
 </li>
 <li>In the Choose pipeline setting UI:
 <ul>
 <li>Pipeline name: Enter <code>smartdocai-be-pipeline</code></li>
 <li>Role name: Enter <code>AWSCodePipelineServiceRole-us-east-1-smartdocai-be-pipeline</code>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/28.png" alt="choose-pipeline-setting"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/28.png" alt="choose-pipeline-setting"  />
+</li>
 </ul>
 </li>
 <li>In the Add source stage UI:
@@ -1466,9 +1487,15 @@
 <li>Repository: Select <strong>repo TakunKenjo/SmartdocAI-AWS</strong></li>
 <li>Default branch: Select <strong>main</strong></li>
 <li>Output artifact format: Select <strong>CodePipeline default</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/29.png" alt="add-source-stage1"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/29.png" alt="add-source-stage1"  />
+</li>
 <li>Scroll to the bottom of the page and select <strong>Next</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/30.png" alt="add-source-stage2"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/30.png" alt="add-source-stage2"  />
+</li>
 </ul>
 </li>
 <li>In the Add build stage - optional UI:
@@ -1476,7 +1503,10 @@
 <li>Build provider: Select <strong>Other build providers</strong></li>
 <li>Select: Select <strong>AWS CodeBuild</strong></li>
 <li>Project name: Click the <strong>Create project</strong> button
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/31.png" alt="add-build-stage"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/31.png" alt="add-build-stage"  />
+</li>
 </ul>
 </li>
 </ul>
@@ -1486,22 +1516,37 @@
 <ul>
 <li>Project name: Enter <code>smartdocai-be-build</code></li>
 <li>Project type: Select <strong>Default project</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/32.png" alt="create-build-project"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/32.png" alt="create-build-project"  />
+</li>
 <li>Operating system: Select <strong>Ubuntu</strong></li>
 <li>Runtime(s): Select <strong>Standard</strong></li>
 <li>Image: Select <strong>aws/codebuild/standard:8.0</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/33.png" alt="envi"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/33.png" alt="envi"  />
+</li>
 <li>Service role: Select <strong>New service role</strong></li>
 <li>Role name: Enter <code>codebuild-smartdocai-be-build-service-role</code>
 ![service-role](/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/3
 4.png)</li>
 <li>Privileged: Check <strong>Enable this flag…</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/35.png" alt="privi"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/35.png" alt="privi"  />
+</li>
 <li>Build specifications: Select <strong>Use a buildspec file</strong></li>
 <li>Buildspec name - optional: Enter <code>backend/buildspec.yml</code>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/36.png" alt="buildspec-name"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/36.png" alt="buildspec-name"  />
+</li>
 <li>Scroll to the bottom of the page and click <strong>Continue to CodePipeline</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/37.png" alt="continue-to-codepipeline"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/37.png" alt="continue-to-codepipeline"  />
+</li>
 </ul>
 </li>
 </ul>
@@ -1511,25 +1556,37 @@
 <ul>
 <li>Project name: Select the newly created <strong>CodeBuild</strong>: <code>smartdocai-be-build</code></li>
 <li>Scroll to the bottom of the page and click <strong>Next</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/38.png" alt="add-build-stage-final"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/38.png" alt="add-build-stage-final"  />
+</li>
 </ul>
 </li>
 <li>In the Add test stage - optional UI:
 <ul>
 <li>Click <strong>Skip test stage</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/39.png" alt="add-test-stage"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/39.png" alt="add-test-stage"  />
+</li>
 </ul>
 </li>
 <li>In the Add deploy stage UI:
 <ul>
 <li>Click <strong>Skip deploy stage</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/40.png" alt="add-deploy-stage"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/40.png" alt="add-deploy-stage"  />
+</li>
 </ul>
 </li>
 <li>In the Review UI:
 <ul>
 <li>Review Pipeline configuration details
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/41.png" alt="review-pipeline"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/41.png" alt="review-pipeline"  />
+</li>
 <li>Scroll to the bottom of the page and click <strong>Create pipeline</strong></li>
 </ul>
 </li>
@@ -1539,28 +1596,46 @@
 <li>Navigate to IAM &gt; Roles:
 <ul>
 <li>Select <code>codebuild-smartdocai-be-service-role</code>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/1.png" alt="IAM-role"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/1.png" alt="IAM-role"  />
+</li>
 <li>In the Permissions tab: Click <strong>Add permissions</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/2.png" alt="tab-permission"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/2.png" alt="tab-permission"  />
+</li>
 <li>Select <strong>Attach policies</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/3.png" alt="attach-policy"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/3.png" alt="attach-policy"  />
+</li>
 </ul>
 </li>
 <li>Search for: <code>AmazonEC2ContainerRegistryPowerUser</code>
 <ul>
 <li>Check <strong>AmazonEC2ContainerRegistryPowerUser</strong></li>
 <li>Click <strong>Add permissions</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/4.png" alt="add-permission"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/4.png" alt="add-permission"  />
+</li>
 </ul>
 </li>
 <li>Permission policy creation result
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/5.png" alt="permission-policy-success"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/5.png" alt="permission-policy-success"  />
+</li>
 </ul>
 <p><strong>Step 6: Add lambda:UpdateFunctionCode</strong></p>
 <ul>
 <li>After adding ECR, this role also requires: <strong>lambda:UpdateFunctionCode</strong></li>
 <li>Click <strong>Add permissions</strong> and select <strong>Create inline policy</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/6.png" alt="create-inline-policy"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/6.png" alt="create-inline-policy"  />
+</li>
 <li>In the Specify permissions page:
 <ul>
 <li>Select <strong>JSON</strong></li>
@@ -1580,24 +1655,39 @@
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>  ]
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p><img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/7.png" alt="json"></p>
+</span></span></code></pre></div><p>
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/7.png" alt="json"  />
+</p>
 <ul>
 <li>Scroll to the bottom of the page and click <strong>Next</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/8.png" alt="json-next"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/8.png" alt="json-next"  />
+</li>
 <li>In the Review and create UI:
 <ul>
 <li>Policy name: Enter <code>smartdocai-be-codebuild-ecr-lambda-policy</code></li>
 <li>Click <strong>Create policy</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/9.png" alt="create-inline-policy2"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/9.png" alt="create-inline-policy2"  />
+</li>
 </ul>
 </li>
 <li>Permission policy creation confirmation
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/10.png" alt="permission-policy-inline-success"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/10.png" alt="permission-policy-inline-success"  />
+</li>
 </ul>
 <p><strong>Step 7: Verify CodePipeline</strong></p>
 <ul>
 <li>Select <code>smartdocai-be-pipeline</code> and verify build pipeline success
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/11.png" alt="pipeline-be-success"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/11.png" alt="pipeline-be-success"  />
+</li>
 </ul>
 
 
@@ -2667,19 +2757,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785221383"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785221383"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785221383"></script>
-    <script src="/js/jquery.sticky.js?1785221383"></script>
-    <script src="/js/featherlight.min.js?1785221383"></script>
-    <script src="/js/highlight.pack.js?1785221383"></script>
+    <script src="/js/clipboard.min.js?1785416443"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785416443"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785416443"></script>
+    <script src="/js/jquery.sticky.js?1785416443"></script>
+    <script src="/js/featherlight.min.js?1785416443"></script>
+    <script src="/js/highlight.pack.js?1785416443"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785221383"></script>
-    <script src="/js/learn.js?1785221383"></script>
-    <script src="/js/hugo-learn.js?1785221383"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785416443"></script>
+    <script src="/js/learn.js?1785416443"></script>
+    <script src="/js/hugo-learn.js?1785416443"></script>
 
-    <link href="/mermaid/mermaid.css?1785221383" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1785221383"></script>
+    <link href="/mermaid/mermaid.css?1785416443" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1785416443"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

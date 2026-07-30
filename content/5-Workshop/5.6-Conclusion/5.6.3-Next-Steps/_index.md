@@ -54,7 +54,7 @@ The workshop has achieved its goal of deploying and testing SmartDocAI at a demo
 
 If you have any questions or feedback about this workshop, please reach out:
 
-- **Email:** trongngo.02092004@gmail.com
+- **Email:** 12345levan@gmail.com
 - **GitHub:** [@TakunKenjo](https://github.com/TakunKenjo)
 - **Workshop Repository:** [Workshop-AWS-Group-Report](https://github.com/TakunKenjo/Workshop-AWS-Group-Report)
 

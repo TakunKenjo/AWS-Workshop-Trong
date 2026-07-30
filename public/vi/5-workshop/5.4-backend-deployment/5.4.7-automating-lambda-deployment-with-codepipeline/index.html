@@ -15,21 +15,21 @@
     <title>Tự động triển khai Lambda bằng CodePipeline :: Báo cáo thực tập</title>
 
     
-    <link href="/css/nucleus.css?1785221385" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785221385" rel="stylesheet">
-    <link href="/css/hybrid.css?1785221385" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785221385" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785221385" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785221385" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785221385" rel="stylesheet">
-    <link href="/css/theme.css?1785221385" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785221385" rel="stylesheet">
+    <link href="/css/nucleus.css?1785416445" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785416445" rel="stylesheet">
+    <link href="/css/hybrid.css?1785416445" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785416445" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785416445" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785416445" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785416445" rel="stylesheet">
+    <link href="/css/theme.css?1785416445" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785416445" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1785221385" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1785416445" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1785221385"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785416445"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785221385"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785221385"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785416445"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785416445"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785221385"></script>
+<script type="text/javascript" src="/js/search.js?1785416445"></script>
  
   </div>
 
@@ -1291,7 +1291,7 @@
     <br>
     <b> Last Updated </b> <br>
     <i>
-        <font color=orange>28-07-2026</font>
+        <font color=orange>30-07-2026</font>
     </i>
 </left>
 <left>
@@ -1394,11 +1394,20 @@
 	<h3 id="1-kiểm-tra-lambda">1. Kiểm tra Lambda</h3>
 <ul>
 <li>Tìm kiếm <code>Lambda</code> trong công cụ tìm kiếm của <strong>AWS Console</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/22.png" alt="find-lambda"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/22.png" alt="find-lambda"  />
+</li>
 <li>Kiểm tra đã có <strong>Function smartdocai</strong> đã tạo từ trước, sau đó nhấn vào <strong>function</strong> đó
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/23.png" alt="function"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/23.png" alt="function"  />
+</li>
 <li>Kiểm tra <strong>Image URI</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/24.png" alt="image-URI"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/24.png" alt="image-URI"  />
+</li>
 </ul>
 <h3 id="2-tạo-codepipeline-kết-nối-lambda">2. Tạo CodePipeline kết nối Lambda</h3>
 <p><strong>Bước 1: Tạo backend/buildspec.yml (Quy trình CI/CD Automated Testing &amp; Hard Fail)</strong></p>
@@ -1440,23 +1449,35 @@
 </span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">docker push $REPOSITORY_URI:$IMAGE_TAG</span>
 </span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">echo &#34;=== Phase 7: Deploying Updated Image to AWS Lambda ===&#34;</span>
 </span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">aws lambda update-function-code --function-name $LAMBDA_FUNCTION_NAME --image-uri $REPOSITORY_URI:$IMAGE_TAG</span>
-</span></span></code></pre></div><p><img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/25.png" alt="file-buildspec">
+</span></span></code></pre></div><p>
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/25.png" alt="file-buildspec"  />
+
 <strong>Bước 2: Tạo CodePipeline</strong></p>
 <ul>
 <li>Truy cập <strong>CodePipeline</strong> và nhấn nút <strong>Create pipeline</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/26.png" alt="codepipeline"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/26.png" alt="codepipeline"  />
+</li>
 <li>Trong giao diện Choose creation option:
 <ul>
 <li>Chọn <strong>Build custom pipeline</strong></li>
 <li>Nhấn <strong>Next</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/27.png" alt="choose-creation-option"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/27.png" alt="choose-creation-option"  />
+</li>
 </ul>
 </li>
 <li>Trong giao diện Choose pipeline setting
 <ul>
 <li>Pipeline name:  Nhập smartdocai-be-pipeline</li>
 <li>Role name: Nhập AWSCodePipelineServiceRole-us-east-1-smartdocai-be-pipeline
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/28.png" alt="choose-pipeline-setting"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/28.png" alt="choose-pipeline-setting"  />
+</li>
 </ul>
 </li>
 <li>Trong giao diện Add source stage:
@@ -1466,9 +1487,15 @@
 <li>Repository: Chọn <strong>repo TakunKenjo/SmartdocAI-AWS</strong></li>
 <li>Default branch: Chọn <strong>main</strong></li>
 <li>Output artifact format: Chọn <strong>CodePipeline default</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/29.png" alt="add-source-stage1"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/29.png" alt="add-source-stage1"  />
+</li>
 <li>Cuộn đến cuối trang và chọn <strong>Next</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/30.png" alt="add-source-stage2"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/30.png" alt="add-source-stage2"  />
+</li>
 </ul>
 </li>
 <li>Trong giao diện Add build stage - optional
@@ -1476,7 +1503,10 @@
 <li>Build provider: Chọn <strong>Other build providers</strong></li>
 <li>Select: Chọn <strong>AWS CodeBuild</strong></li>
 <li>Project name: Chọn nút <strong>Create project</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/31.png" alt="add-build-stage"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/31.png" alt="add-build-stage"  />
+</li>
 </ul>
 </li>
 </ul>
@@ -1486,21 +1516,39 @@
 <ul>
 <li>Project name: Nhập <code>smartdocai-be-build</code></li>
 <li>Project type: Chọn <strong>Default project</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/32.png" alt="create-build-project"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/32.png" alt="create-build-project"  />
+</li>
 <li>Operating system: Chọn <strong>Ubuntu</strong></li>
 <li>Runtime(s): Chọn <strong>Standard</strong></li>
 <li>Image: Chọn <strong>aws/codebuild/standard:8.0</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/33.png" alt="envi"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/33.png" alt="envi"  />
+</li>
 <li>Service role: Chọn <strong>New service role</strong></li>
 <li>Role name: Nhập <code>codebuild-smartdocai-be-build-service-role</code>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/34.png" alt="service-role"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/34.png" alt="service-role"  />
+</li>
 <li>Privileged: Tick vào <strong>Enable this flag…</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/35.png" alt="privi"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/35.png" alt="privi"  />
+</li>
 <li>Build specifications: Chọn <strong>Use a buildspec file</strong></li>
 <li>Buildspec name - optional: Nhập <code>backend/buildspec.yml</code>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/36.png" alt="buildspec-name"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/36.png" alt="buildspec-name"  />
+</li>
 <li>Cuộn đến cuối trang và nhấn nút <strong>Continue to CodePipeline</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/37.png" alt="continue-to-codepipeline"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/37.png" alt="continue-to-codepipeline"  />
+</li>
 </ul>
 </li>
 </ul>
@@ -1510,25 +1558,37 @@
 <ul>
 <li>Project name: Chọn <strong>CodeBuild</strong> vừa tạo: <strong>smartdocai-be-build</strong></li>
 <li>Cuộn đến cuối trang và nhấn nút <strong>Next</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/38.png" alt="add-build-stage-final"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/38.png" alt="add-build-stage-final"  />
+</li>
 </ul>
 </li>
 <li>Trong giao diện Add test stage - optinal:
 <ul>
 <li>Nhấn nút <strong>Skip test stage</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/39.png" alt="add-test-stage"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/39.png" alt="add-test-stage"  />
+</li>
 </ul>
 </li>
 <li>Trong giao diện Add deploy stage:
 <ul>
 <li>Nhấn nút <strong>Skip deploy stage</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/40.png" alt="add-deploy-stage"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/40.png" alt="add-deploy-stage"  />
+</li>
 </ul>
 </li>
 <li>Trong giao diện Review:
 <ul>
 <li>Xem lại thông tin cấu hình Pipeline
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/41.png" alt="review-pipeline"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/41.png" alt="review-pipeline"  />
+</li>
 <li>Cuộn đến cuối trang và nhấn nút <strong>Create pipeline</strong></li>
 </ul>
 </li>
@@ -1538,26 +1598,44 @@
 <li>Truy cập IAM &gt; Roles:
 <ul>
 <li>Chọn <strong>codebuild-smartdocai-be-service-role</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/1.png" alt="IAM-role"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/1.png" alt="IAM-role"  />
+</li>
 <li>Trong tab permissons: Chọn nút <strong>Add permissons</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/2.png" alt="tab-permission"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/2.png" alt="tab-permission"  />
+</li>
 <li>Chọn <strong>Attach policies</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/3.png" alt="attach-policy"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/3.png" alt="attach-policy"  />
+</li>
 </ul>
 </li>
 <li>Tìm: AmazonEC2ContainerRegistryPowerUser
 <ul>
 <li>Tick vào: <strong>AmazonEC2ContainerRegistryPowerUser</strong></li>
 <li>Sau đó: Nhấn nút <strong>Add permissions</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/4.png" alt="add-permission"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/4.png" alt="add-permission"  />
+</li>
 </ul>
 </li>
 <li>Kết quả tạo Permisson policy
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/5.png" alt="permission-policy-success">
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/5.png" alt="permission-policy-success"  />
+
 <strong>Bước 6: Thêm lambda: UpdateFunctionCode</strong></li>
 <li>Sau khi thêm ECR, role này còn cần: <strong>lambda:UpdateFunctionCode</strong></li>
 <li>Nhấn nút <strong>Add permissons</strong> và chọn <strong>Create inline policy</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/6.png" alt="create-inline-policy"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/6.png" alt="create-inline-policy"  />
+</li>
 <li>Trong trang Specify permissions:
 <ul>
 <li>Chọn <strong>JSON</strong></li>
@@ -1577,22 +1655,37 @@
     }
   ]
 }
-</code></pre><p><img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/7.png" alt="json"></p>
+</code></pre><p>
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/7.png" alt="json"  />
+</p>
 <ul>
 <li>Cuộn đến cuối trang và nhấn <strong>Next</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/8.png" alt="json-next"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/8.png" alt="json-next"  />
+</li>
 <li>Trong giao diện Review and create:
 <ul>
 <li>Policy name: Nhập <code>smartdocai-be-codebuild-ecr-lambda-policy</code></li>
 <li>Nhấn nút <strong>Create policy</strong>
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/9.png" alt="create-inline-policy2"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/9.png" alt="create-inline-policy2"  />
+</li>
 </ul>
 </li>
 <li>Thông báo tạo <strong>Permisson policy</strong> thành công
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/10.png" alt="permission-policy-inline-success">
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/10.png" alt="permission-policy-inline-success"  />
+
 <strong>Bước 7: Kiểm tra CodePipeline</strong></li>
 <li>Chọn <strong>Pipeline smartdocai-be-pipeline</strong> và kiểm tra kết quả <strong>build pipeline</strong> thành công
-<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/11.png" alt="pipeline-be-success"></li>
+
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.7-automating-lambda-deployment-with-codePipeline/11.png" alt="pipeline-be-success"  />
+</li>
 </ul>
 
 
@@ -2662,19 +2755,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785221385"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785221385"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785221385"></script>
-    <script src="/js/jquery.sticky.js?1785221385"></script>
-    <script src="/js/featherlight.min.js?1785221385"></script>
-    <script src="/js/highlight.pack.js?1785221385"></script>
+    <script src="/js/clipboard.min.js?1785416445"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785416445"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785416445"></script>
+    <script src="/js/jquery.sticky.js?1785416445"></script>
+    <script src="/js/featherlight.min.js?1785416445"></script>
+    <script src="/js/highlight.pack.js?1785416445"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785221385"></script>
-    <script src="/js/learn.js?1785221385"></script>
-    <script src="/js/hugo-learn.js?1785221385"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785416445"></script>
+    <script src="/js/learn.js?1785416445"></script>
+    <script src="/js/hugo-learn.js?1785416445"></script>
 
-    <link href="/mermaid/mermaid.css?1785221385" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1785221385"></script>
+    <link href="/mermaid/mermaid.css?1785416445" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1785416445"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

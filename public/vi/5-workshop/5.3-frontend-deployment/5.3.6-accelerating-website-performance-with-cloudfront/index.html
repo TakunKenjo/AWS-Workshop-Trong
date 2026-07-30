@@ -15,21 +15,21 @@
     <title>Tăng tốc Website với CloudFront :: Báo cáo thực tập</title>
 
     
-    <link href="/css/nucleus.css?1785221385" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785221385" rel="stylesheet">
-    <link href="/css/hybrid.css?1785221385" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785221385" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785221385" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785221385" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785221385" rel="stylesheet">
-    <link href="/css/theme.css?1785221385" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785221385" rel="stylesheet">
+    <link href="/css/nucleus.css?1785416445" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785416445" rel="stylesheet">
+    <link href="/css/hybrid.css?1785416445" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785416445" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785416445" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785416445" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785416445" rel="stylesheet">
+    <link href="/css/theme.css?1785416445" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785416445" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1785221385" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1785416445" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1785221385"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785416445"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785221385"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785221385"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785416445"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785416445"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785221385"></script>
+<script type="text/javascript" src="/js/search.js?1785416445"></script>
  
   </div>
 
@@ -1291,7 +1291,7 @@
     <br>
     <b> Last Updated </b> <br>
     <i>
-        <font color=orange>28-07-2026</font>
+        <font color=orange>30-07-2026</font>
     </i>
 </left>
 <left>
@@ -1401,80 +1401,140 @@
 <li>Chọn tab <em><strong>Permissions</strong></em></li>
 <li>Hiện tại sẽ thấy <em><strong>Block all public access</strong></em>: <em><strong>Off</strong></em></li>
 <li>Chọn <em><strong>Edit</strong></em> trong phần <em><strong>Block public access (bucket settings)</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/permission-overview.png" alt="permission-overview"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/permission-overview.png" alt="permission-overview"  />
+</li>
 <li>Sau đó, chọn <em><strong>Block all public access</strong></em></li>
 <li>Chọn <em><strong>Save changes</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/edit-block-public-access.png" alt="edit-block-public-access"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/edit-block-public-access.png" alt="edit-block-public-access"  />
+</li>
 <li>Trong cửa sổ xác nhận, nhập <code>confirm</code></li>
 <li>Sau đó, chọn <em><strong>confirm</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/confirm-edit-block-public-access.png" alt="confirm-edit-block-public-access"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/confirm-edit-block-public-access.png" alt="confirm-edit-block-public-access"  />
+</li>
 <li>Kiểm tra <em><strong>Block all public access</strong></em> đã được <em><strong>On</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/block-public-access-on.png" alt="block-public-access-on"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/block-public-access-on.png" alt="block-public-access-on"  />
+</li>
 </ul>
 </li>
 <li>Kiểm tra chức năng của Block all public access:
 <ul>
 <li>Trong giao diện S3 bucket, chọn tab <em><strong>Properties</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/properties.png" alt="properties"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/properties.png" alt="properties"  />
+</li>
 <li>Cuộn xuống cuối trang, tại mục <em><strong>Static website hosting</strong></em>, copy URL
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/copy-URL.png" alt="copy-URL"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/copy-URL.png" alt="copy-URL"  />
+</li>
 <li>Mở URL tại cửa sổ ẩn danh mới</li>
 <li>Kết quả cho thấy Block all public access thành công
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/block-all-public-access-success.png" alt="block-all-public-access-success"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/block-all-public-access-success.png" alt="block-all-public-access-success"  />
+</li>
 </ul>
 </li>
 </ul>
 <h3 id="2-cấu-hình-amazon-cloudfront">2. Cấu hình Amazon Cloudfront</h3>
 <ul>
 <li>Tìm kiếm <code>Cloudfront</code> trong thanh tìm kiếm <em><strong>AWS Console</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/find-cloudfront.png" alt="find-cloudfront"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/find-cloudfront.png" alt="find-cloudfront"  />
+</li>
 <li>Chọn <em><strong>Create distribution</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/create-distribution.png" alt="create-distribution"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/create-distribution.png" alt="create-distribution"  />
+</li>
 <li>Tại giao diện Get started:
 <ul>
 <li>Distribution name: Nhập <code>aws-smartdocsai-cloud-distribution</code></li>
 <li>Sau đó chọn <em><strong>Next</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/get-started.png" alt="get-started"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/get-started.png" alt="get-started"  />
+</li>
 </ul>
 </li>
 <li>Trong giao diện Specify origin:
 <ul>
 <li>Origin type: Chọn <em><strong>Amazon S3</strong></em></li>
 <li>Origin: S3-origin nhấn nút <em><strong>Browse S3</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/specify-origin.png" alt="specify-origin"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/specify-origin.png" alt="specify-origin"  />
+</li>
 <li>Chọn <em><strong>S3 bucket aws-smartdocsai-cloud</strong></em></li>
 <li>Nhấn nút <em><strong>Choose</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/select-s3-location.png" alt="select-s3-location"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/select-s3-location.png" alt="select-s3-location"  />
+</li>
 <li>S3 origin đã chọn:
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/s3-origin-choosed.png" alt="s3-origin-choosed"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/s3-origin-choosed.png" alt="s3-origin-choosed"  />
+</li>
 <li>Cuộn đến cuối trang và nhấn <em><strong>Next</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/s3-origin-next.png" alt="s3-origin-next"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/s3-origin-next.png" alt="s3-origin-next"  />
+</li>
 </ul>
 </li>
 <li>Trong giao diện Enable security
 <ul>
 <li>Web Application Firewall (WAF): Chọn <em><strong>Do not enable security protections</strong></em></li>
 <li>Sau đó, nhấn nút <em><strong>Next</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/enable-security.png" alt="enable-security"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/enable-security.png" alt="enable-security"  />
+</li>
 </ul>
 </li>
 <li>Trong giao diện Review and create:
 <ul>
 <li>Kiểm tra lại các thông tin Cloudfront</li>
 <li>Sau đó nhấn nút <em><strong>Create distribution</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/review-and-create-distribution.png" alt="review-and-create-distribution"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/review-and-create-distribution.png" alt="review-and-create-distribution"  />
+</li>
 </ul>
 </li>
 <li>Sau đó, sẽ chuyển hướng đến trang thông tin Cloudfront với trạng thái <em><strong>Deploying</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/cloudfront-deploying.png" alt="cloudfront-deploying"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/cloudfront-deploying.png" alt="cloudfront-deploying"  />
+</li>
 <li>Đợi vài phút, trạng thái sẽ chuyển sang thời gian được cập nhật
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/cloudfront-deploy-success.png" alt="cloudfront-deploy-success"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/cloudfront-deploy-success.png" alt="cloudfront-deploy-success"  />
+</li>
 <li>Quay lại giao diện S3 bucket:
 <ul>
 <li>Chọn tab <em><strong>Permissions</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/permission-return.png" alt="permission-return"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/permission-return.png" alt="permission-return"  />
+</li>
 <li>Cuộn xuống trong mục <em><strong>Bucket policy</strong></em>, xem các thông tin quan trọng
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/bucket-policy.png" alt="bucket-policy"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/bucket-policy.png" alt="bucket-policy"  />
+</li>
 </ul>
 </li>
 </ul>
@@ -1484,19 +1544,31 @@
 <ul>
 <li>Chọn tab <em><strong>General</strong></em></li>
 <li>Setting: Chọn <em><strong>Edit</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/default-root-general.png" alt="default-root-general"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/default-root-general.png" alt="default-root-general"  />
+</li>
 </ul>
 </li>
 <li>Trong giao diện Edit Setting
 <ul>
 <li>Default root object - optional: Nhập <code>index.html</code>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/default-root-setting.png" alt="default-root-setting"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/default-root-setting.png" alt="default-root-setting"  />
+</li>
 <li>Cuộn đến cuối trang và nhấn <em><strong>Save changes</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/default-root-save.png" alt="default-root-save"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/default-root-save.png" alt="default-root-save"  />
+</li>
 </ul>
 </li>
 <li>Kiểm tra Default root object đã hiện <em><strong>index.html</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/check-default-root-edit.png" alt="check-default-root-edit"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/check-default-root-edit.png" alt="check-default-root-edit"  />
+</li>
 </ul>
 <h3 id="4-tạo-error-pages">4. Tạo Error pages</h3>
 <ul>
@@ -1504,7 +1576,10 @@
 <ul>
 <li>Chọn tab <em><strong>Error pages</strong></em></li>
 <li>Nhấn <em><strong>Create custom error response</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/create-custom-error.png" alt="create-custom-error"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/create-custom-error.png" alt="create-custom-error"  />
+</li>
 </ul>
 </li>
 <li>Trong trang Create custom error response:
@@ -1515,22 +1590,40 @@
 <li>Response page path: Nhập <code>/index.html</code></li>
 <li>HTTP Response code: Chọn <em><strong>200: OK</strong></em></li>
 <li>Sau đó, nhấn <em><strong>Create custom error response</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/create-first-custom-error.png" alt="create-first-custom-error"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/create-first-custom-error.png" alt="create-first-custom-error"  />
+</li>
 <li>Tạo tương tự cho Error response 2 với các thông tin như ảnh bên dưới
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/create-second-custom-error.png" alt="create-second-custom-error"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/create-second-custom-error.png" alt="create-second-custom-error"  />
+</li>
 </ul>
 </li>
 <li>Kiểm tra các Error pages đã tạo
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/check-list-custom-error.png" alt="check-list-custom-error"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/check-list-custom-error.png" alt="check-list-custom-error"  />
+</li>
 </ul>
 <h3 id="5-kiểm-tra-cấu-hình-amazon-cloudfront">5. Kiểm tra cấu hình Amazon Cloudfront</h3>
 <ul>
 <li>Trong giao diện Cloudfront, chọn ******
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/cloudfront-id.png" alt="cloudfront-id"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/cloudfront-id.png" alt="cloudfront-id"  />
+</li>
 <li>Tại mục Distribution domain name, <em><strong>copy URL</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/copy-url-cloudfront.png" alt="copy-url-cloudfront"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/copy-url-cloudfront.png" alt="copy-url-cloudfront"  />
+</li>
 <li>Mở URL vào một tab khác của trình duyệt
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/check-cloudfront-url.png" alt="check-cloudfront-url"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.6-accelerating-website-performance-with-cloudFront/check-cloudfront-url.png" alt="check-cloudfront-url"  />
+</li>
 </ul>
 
 
@@ -2600,19 +2693,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785221385"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785221385"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785221385"></script>
-    <script src="/js/jquery.sticky.js?1785221385"></script>
-    <script src="/js/featherlight.min.js?1785221385"></script>
-    <script src="/js/highlight.pack.js?1785221385"></script>
+    <script src="/js/clipboard.min.js?1785416445"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785416445"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785416445"></script>
+    <script src="/js/jquery.sticky.js?1785416445"></script>
+    <script src="/js/featherlight.min.js?1785416445"></script>
+    <script src="/js/highlight.pack.js?1785416445"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785221385"></script>
-    <script src="/js/learn.js?1785221385"></script>
-    <script src="/js/hugo-learn.js?1785221385"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785416445"></script>
+    <script src="/js/learn.js?1785416445"></script>
+    <script src="/js/hugo-learn.js?1785416445"></script>
 
-    <link href="/mermaid/mermaid.css?1785221385" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1785221385"></script>
+    <link href="/mermaid/mermaid.css?1785416445" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1785416445"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

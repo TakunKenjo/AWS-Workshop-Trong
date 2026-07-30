@@ -15,21 +15,21 @@
     <title>Tự động triển khai bằng CodePipeline (GitHub → S3) :: Báo cáo thực tập</title>
 
     
-    <link href="/css/nucleus.css?1785221385" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785221385" rel="stylesheet">
-    <link href="/css/hybrid.css?1785221385" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785221385" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785221385" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785221385" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785221385" rel="stylesheet">
-    <link href="/css/theme.css?1785221385" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785221385" rel="stylesheet">
+    <link href="/css/nucleus.css?1785416445" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785416445" rel="stylesheet">
+    <link href="/css/hybrid.css?1785416445" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785416445" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785416445" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785416445" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785416445" rel="stylesheet">
+    <link href="/css/theme.css?1785416445" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785416445" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1785221385" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1785416445" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1785221385"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785416445"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785221385"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785221385"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785416445"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785416445"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785221385"></script>
+<script type="text/javascript" src="/js/search.js?1785416445"></script>
  
   </div>
 
@@ -1291,7 +1291,7 @@
     <br>
     <b> Last Updated </b> <br>
     <i>
-        <font color=orange>28-07-2026</font>
+        <font color=orange>30-07-2026</font>
     </i>
 </left>
 <left>
@@ -1398,14 +1398,23 @@
 <ul>
 <li>Tìm kiếm <code>CodePipeLine</code> trong công cụ tìm kiếm <em><strong>AWS Console</strong></em></li>
 <li>Chọn <em><strong>CodePipeLine</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/find-code-pipeline.png" alt="find-code-pipeline"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/find-code-pipeline.png" alt="find-code-pipeline"  />
+</li>
 <li>Chọn <em><strong>Create pipeline</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/create-pipeline.png" alt="create-pipeline"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/create-pipeline.png" alt="create-pipeline"  />
+</li>
 <li>Trong giao diện Choose creation option:
 <ul>
 <li>Category: Chọn <em><strong>Build custom pipeline</strong></em></li>
 <li>Sau đó, nhấn <em><strong>Next</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/Choose-creation-option.png" alt="Choose-creation-option"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/Choose-creation-option.png" alt="Choose-creation-option"  />
+</li>
 </ul>
 </li>
 <li>Trong giao diện Pipeline settings:
@@ -1415,14 +1424,20 @@
 <li>Service role: Chọn <em><strong>New service role</strong></em></li>
 <li>Role name: Nhập <code>smartdocsai-de-role</code></li>
 <li>Sau đó, nhấn nút <em><strong>Next</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/pipeline-setting.png" alt="pipeline-setting"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/pipeline-setting.png" alt="pipeline-setting"  />
+</li>
 </ul>
 </li>
 <li>Trong giao diện Add source stage:
 <ul>
 <li>Source provider: Chọn <em><strong>Github (via Github App)</strong></em></li>
 <li>Connection: Nhấn nút <em><strong>Connect to Github</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/add-source-stage.png" alt="add-source-stage"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/add-source-stage.png" alt="add-source-stage"  />
+</li>
 </ul>
 </li>
 <li>Sau khi nhấn nút <em><strong>Connect to Github</strong></em>:
@@ -1430,32 +1445,53 @@
 <li>Sẽ xuất hiện cửa sổ <em><strong>Create a connection</strong></em></li>
 <li>Connection name: Nhập <code>smartdocsai-github</code></li>
 <li>Nhấn nút <em><strong>Connect to Github</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/create-a-connection.png" alt="create-a-connection"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/create-a-connection.png" alt="create-a-connection"  />
+</li>
 </ul>
 </li>
 <li>Nhấn nút <em><strong>Authorize</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/authorize.png" alt="authorize"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/authorize.png" alt="authorize"  />
+</li>
 <li>Trong giao diện Connect to Github:
 <ul>
 <li>Nhấn <em><strong>Install a new app</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/install-a-new-app.png" alt="install-a-new-app"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/install-a-new-app.png" alt="install-a-new-app"  />
+</li>
 <li>Chọn <em><strong>All repositories</strong></em></li>
 <li>Sau đó nhấn nút <em><strong>Install &amp; Authorize</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/install-and-authorize.png" alt="install-and-authorize"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/install-and-authorize.png" alt="install-and-authorize"  />
+</li>
 </ul>
 </li>
 <li>Nhập mã xác nhận kết nối
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/confirm-access.png" alt="confirm-access"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/confirm-access.png" alt="confirm-access"  />
+</li>
 <li>Sau khi kết nối thành công:
 <ul>
 <li>Quay trở lại giao diện Connect to Github</li>
 <li>App installation - optional: Chọn <em><strong>tài khoản github vừa kết nối</strong></em></li>
 <li>Sau đó nhấn nút <em><strong>Connect</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/connect-github.png" alt="connect-github"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/connect-github.png" alt="connect-github"  />
+</li>
 </ul>
 </li>
 <li>Kết quả kết nối thành công
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/connect-github-success.png" alt="connect-github-success"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/connect-github-success.png" alt="connect-github-success"  />
+</li>
 <li>Trong giao diện Add source stage:
 <ul>
 <li>Connection: Chọn <em><strong>connection vừa tạo</strong></em></li>
@@ -1463,9 +1499,15 @@
 <li>Default branch: Chọn <strong>main</strong></li>
 <li>Output artifact format: Chọn <em><strong>CodePipeline default</strong></em></li>
 <li>Chọn <em><strong>Enable automatic retry on stage failure</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/add-source-stage2.png" alt="add-source-stage2"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/add-source-stage2.png" alt="add-source-stage2"  />
+</li>
 <li>Cuộn đến cuối trang và chọn <em><strong>Next</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/add-source-stage-next.png" alt="add-source-stage-next"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/add-source-stage-next.png" alt="add-source-stage-next"  />
+</li>
 </ul>
 </li>
 <li>Trong giao diện Add build stage - optional:
@@ -1473,31 +1515,46 @@
 <li>Build provider: Chọn <em><strong>Other build providers</strong></em></li>
 <li>Select: Chọn <em><strong>AWS CodeBuild</strong></em></li>
 <li>Project name: Nhấn nút <em><strong>Create project</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/add-build-stage.png" alt="add-build-stage"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/add-build-stage.png" alt="add-build-stage"  />
+</li>
 </ul>
 </li>
 <li>Project configuration:
 <ul>
 <li>Project name: Nhập <code>smartdocsai-fe-build</code></li>
 <li>Project type: Chọn <em><strong>Default project</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/project-config.png" alt="project-config"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/project-config.png" alt="project-config"  />
+</li>
 </ul>
 </li>
 <li>Environment:
 <ul>
 <li>Operating system: Chọn <em><strong>Ubuntu</strong></em></li>
 <li>Image: Chọn <em><strong>aws/codebuild/standard:8.0</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/envi1.png" alt="envi1"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/envi1.png" alt="envi1"  />
+</li>
 <li>Service role: Chọn <em><strong>new service role</strong></em></li>
 <li>Role name: Nhập <code>smartdocsai-codebuild-role</code>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/envi2.png" alt="envi2"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/envi2.png" alt="envi2"  />
+</li>
 </ul>
 </li>
 <li>Buildspec:
 <ul>
 <li>Build specification: Chọn <em><strong>Use a buildspec file</strong></em></li>
 <li>Buildspec name - optional: Nhập <code>smart-docs-ai/smart-docs-ai/buildspec.yml</code>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/buildspec.png" alt="buildspec"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/buildspec.png" alt="buildspec"  />
+</li>
 </ul>
 </li>
 <li>Trong src code:
@@ -1505,7 +1562,10 @@
 <li>Tạo file <code>buildspec.yml</code> ở vị trí như ảnh bên dưới</li>
 <li>Nhập nội dung file như ảnh</li>
 <li>Sau đó, push code lên github, đảm bảo trên Github đã có file buildspec.yml với đầy đủ nội dung
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/content-buildspec.png" alt="content-buildspec"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/content-buildspec.png" alt="content-buildspec"  />
+</li>
 </ul>
 </li>
 <li>Trong Logs:
@@ -1513,22 +1573,34 @@
 <li>Chọn <em><strong>CloudWatch logs-optional</strong></em></li>
 <li>Group name - optional: Nhập <code>/aws/codebuild/smartdocsai-fe-build</code></li>
 <li>Sau đó nhấn nút <em><strong>Continue to CodePipeline</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/logs.png" alt="logs"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/logs.png" alt="logs"  />
+</li>
 </ul>
 </li>
 <li>Tại giao diện Add build stage - optional:
 <ul>
 <li>Project name: Chọn <em><strong>project name vừa tạo smartdocsai-fe-build</strong></em></li>
 <li>Build type: Chọn <em><strong>Single build</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/single-build.png" alt="single-build"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/single-build.png" alt="single-build"  />
+</li>
 <li>Cuộn đến cuối trang và chọn <em><strong>Next</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/single-build-next.png" alt="single-build-next"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/single-build-next.png" alt="single-build-next"  />
+</li>
 </ul>
 </li>
 <li>Tại giao diện Add test stage - optional:
 <ul>
 <li>Chọn <em><strong>Skip test stage</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/add-test-stage.png" alt="add-test-stage"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/add-test-stage.png" alt="add-test-stage"  />
+</li>
 </ul>
 </li>
 <li>Trong trang Add deploy stage:
@@ -1538,23 +1610,41 @@
 <li>Deployment path - optional: Nhập <code>smartdocsai-fe.zip</code></li>
 <li>Chọn <em><strong>Extract file before deploy</strong></em></li>
 <li>Chọn <em><strong>Next</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/add-deploy-stage.png" alt="add-deploy-stage"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/add-deploy-stage.png" alt="add-deploy-stage"  />
+</li>
 </ul>
 </li>
 <li>Trong giao diện Review:
 <ul>
 <li>Xem lại thông tin CodePipeline
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/review-pipeline.png" alt="review-pipeline"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/review-pipeline.png" alt="review-pipeline"  />
+</li>
 <li>Cuộn đến cuối trang, nhấn <em><strong>Create pipeline</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/step6-create-pipeline.png" alt="step6-create-pipeline"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/step6-create-pipeline.png" alt="step6-create-pipeline"  />
+</li>
 </ul>
 </li>
 <li>Hiển thị trạng thái đang <em><strong>build/deploy</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/build-deploy.png" alt="build-deploy"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/build-deploy.png" alt="build-deploy"  />
+</li>
 <li>Kết quả deploy thành công CodePipeline
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/deploy-success.png" alt="deploy-success"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/deploy-success.png" alt="deploy-success"  />
+</li>
 <li>Lưu ý xóa các file cũ trong S3 bucket frontend, khi deploy codePipeline các file sẽ tự tạo lại
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/delete-old-file.png" alt="delete-old-file"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/delete-old-file.png" alt="delete-old-file"  />
+</li>
 </ul>
 <h3 id="2-tạo-origin-path-cho-cloudfront">2. Tạo Origin path cho Cloudfront</h3>
 <ul>
@@ -1563,15 +1653,24 @@
 <li>Chọn tab <em><strong>Origins</strong></em></li>
 <li>Chọn cloudfront như ảnh bên dưới</li>
 <li>Chọn <em><strong>Edit</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/tab-origin.png" alt="tab-origin"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/tab-origin.png" alt="tab-origin"  />
+</li>
 </ul>
 </li>
 <li>Tại giao diện Edit origin:
 <ul>
 <li>Origin path: Nhập <code>/smartdocsai-fe-zip</code>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/origin-path.png" alt="origin-path"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/origin-path.png" alt="origin-path"  />
+</li>
 <li>Cuộn đến cuối trang và chọn <em><strong>Save changes</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/save-origin-path.png" alt="save-origin-path"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/save-origin-path.png" alt="save-origin-path"  />
+</li>
 </ul>
 </li>
 </ul>
@@ -1581,7 +1680,10 @@
 <ul>
 <li>Chọn tab <em><strong>Invalidations</strong></em></li>
 <li>Chọn <em><strong>Create invalidations</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/tab-invalidation.png" alt="tab-invalidation"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/tab-invalidation.png" alt="tab-invalidation"  />
+</li>
 </ul>
 </li>
 <li>Trong giao diện Create invalidation:
@@ -1589,34 +1691,58 @@
 <li>Selection method: Chọn <strong>By paths</strong></li>
 <li>Object paths to invalidation: Nhập <code>/*</code></li>
 <li>Sau đó nhấn <strong>Create invalidation</strong>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/create-invalidation.png" alt="create-invalidation"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/create-invalidation.png" alt="create-invalidation"  />
+</li>
 <li>Thông báo tạo invalidation thành công
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/create-invalidation-success.png" alt="create-invalidation-success"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/create-invalidation-success.png" alt="create-invalidation-success"  />
+</li>
 </ul>
 </li>
 <li>Tại giao diện Cloudfront, kiểm tra lại origin path đã được cập nhật
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/origin-path-updated.png" alt="origin-path-updated"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/origin-path-updated.png" alt="origin-path-updated"  />
+</li>
 </ul>
 <h3 id="4-tạo-invalidation-tự-động-cho-cloudfront">4. Tạo Invalidation tự động cho Cloudfront</h3>
 <p>Bước này sẽ gán quyền cloudfront: CreateInvalidation cho Service role</p>
 <ul>
 <li>Truy cập distribution của Cloudfront và copy ID
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/distribution-id.png" alt="distribution-id"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/distribution-id.png" alt="distribution-id"  />
+</li>
 <li>Tìm kiếm <code>IAM</code> trong công cụ tìm kiếm <strong>AWS Console</strong>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/find-IAM.png" alt="find-IAM"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/find-IAM.png" alt="find-IAM"  />
+</li>
 <li>Trong giao diện IAM:
 <ul>
 <li>Chọn <strong>Roles</strong></li>
 <li>Chọn <strong>Role name codebuild-smartdocsai-fe-build-service-role</strong>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/role-name.png" alt="role-name"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/role-name.png" alt="role-name"  />
+</li>
 </ul>
 </li>
 <li>Trong Role name vừa chọn:
 <ul>
 <li>Chọn <strong>add permissions</strong>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/permission-tab.png" alt="permission-tab"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/permission-tab.png" alt="permission-tab"  />
+</li>
 <li>Chọn <strong>Create inline policy</strong>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/create-inline-policy.png" alt="create-inline-policy"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/create-inline-policy.png" alt="create-inline-policy"  />
+</li>
 </ul>
 </li>
 <li>Trong giao diện Specify permissons:
@@ -1637,19 +1763,31 @@
 </ul>
 </li>
 </ul>
-<p><img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/specify-permission.png" alt="specify-permission"></p>
+<p>
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/specify-permission.png" alt="specify-permission"  />
+</p>
 <ul>
 <li>Cuộn xuống cuối trang, nhấn <strong>Next</strong>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/specify-permission-next.png" alt="specify-permission-next"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/specify-permission-next.png" alt="specify-permission-next"  />
+</li>
 <li>Trong giao diện Review and create:
 <ul>
 <li>Policy name: Nhập <code>AllowCloudfrontInvalidatio</code></li>
 <li>Sau đó, nhấn <strong>Create policy</strong>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/review-and-create-policy.png" alt="review-and-create-policy"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/review-and-create-policy.png" alt="review-and-create-policy"  />
+</li>
 </ul>
 </li>
 <li>Xong bước này, role đã có quyền tạo invalidation.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/policy-invalidation-success.png" alt="policy-invalidation-success"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/policy-invalidation-success.png" alt="policy-invalidation-success"  />
+</li>
 <li>Sửa <strong>buildspec.yml</strong> trong repo — thêm lệnh invalidation
 <pre tabindex="0"><code>version: 0.2
 
@@ -1681,18 +1819,30 @@ files:
 <h3 id="5-kiểm-tra-website-với-codepipeline">5. Kiểm tra website với CodePipeline</h3>
 <ul>
 <li>Truy cập Cloudfront và copy Distribution domain name
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/copy-cloudfront-domain.png" alt="copy-cloudfront-domain"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/copy-cloudfront-domain.png" alt="copy-cloudfront-domain"  />
+</li>
 <li>Dán URL vào tab mới trình duyệt
 <ul>
 <li>Khi này hãy để ý chữ <strong>“Đăng ký ngay”</strong> trong form đăng nhập
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/before-fe.png" alt="before-fe"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/before-fe.png" alt="before-fe"  />
+</li>
 </ul>
 </li>
 <li>Tiến hành sửa code từ <strong>“Đăng ký ngay”</strong> thành <strong>“Đăng ký ngay!” (Thêm dấu !)</strong></li>
 <li>Sau đó push code lên Github
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/code-edit.png" alt="code-edit"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/code-edit.png" alt="code-edit"  />
+</li>
 <li>Đợi 1 lúc để CodePipeline deploy lại, ta sẽ thấy giao diện đã được cập nhật theo code mới
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/after-fe.png" alt="after-fe"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/after-fe.png" alt="after-fe"  />
+</li>
 </ul>
 
 
@@ -2762,19 +2912,19 @@ files:
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785221385"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785221385"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785221385"></script>
-    <script src="/js/jquery.sticky.js?1785221385"></script>
-    <script src="/js/featherlight.min.js?1785221385"></script>
-    <script src="/js/highlight.pack.js?1785221385"></script>
+    <script src="/js/clipboard.min.js?1785416445"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785416445"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785416445"></script>
+    <script src="/js/jquery.sticky.js?1785416445"></script>
+    <script src="/js/featherlight.min.js?1785416445"></script>
+    <script src="/js/highlight.pack.js?1785416445"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785221385"></script>
-    <script src="/js/learn.js?1785221385"></script>
-    <script src="/js/hugo-learn.js?1785221385"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785416445"></script>
+    <script src="/js/learn.js?1785416445"></script>
+    <script src="/js/hugo-learn.js?1785416445"></script>
 
-    <link href="/mermaid/mermaid.css?1785221385" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1785221385"></script>
+    <link href="/mermaid/mermaid.css?1785416445" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1785416445"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

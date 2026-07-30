@@ -15,21 +15,21 @@
     <title>Cấu hình Bucket Policy/Public Object :: Báo cáo thực tập</title>
 
     
-    <link href="/css/nucleus.css?1785222250" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785222250" rel="stylesheet">
-    <link href="/css/hybrid.css?1785222250" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785222250" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785222250" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785222250" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785222250" rel="stylesheet">
-    <link href="/css/theme.css?1785222250" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785222250" rel="stylesheet">
+    <link href="/css/nucleus.css?1785416445" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785416445" rel="stylesheet">
+    <link href="/css/hybrid.css?1785416445" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785416445" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785416445" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785416445" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785416445" rel="stylesheet">
+    <link href="/css/theme.css?1785416445" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785416445" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1785222250" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1785416445" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1785222250"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785416445"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785222250"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785222250"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785416445"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785416445"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785222250"></script>
+<script type="text/javascript" src="/js/search.js?1785416445"></script>
  
   </div>
 
@@ -1291,7 +1291,7 @@
     <br>
     <b> Last Updated </b> <br>
     <i>
-        <font color=orange>28-07-2026</font>
+        <font color=orange>30-07-2026</font>
     </i>
 </left>
 <left>
@@ -1399,37 +1399,52 @@
 	<h3 id="1-truy-cập-quyền-bucket">1. Truy cập quyền Bucket</h3>
 <ul>
 <li>Trong giao diện S3, chọn tab <em><strong>Permissions</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.4-config-bucket-policy-public-object-access/tab-permission.png" alt="tab-permission"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.4-config-bucket-policy-public-object-access/tab-permission.png" alt="tab-permission"  />
+</li>
 </ul>
 <h3 id="2-tìm-access-control-list">2. Tìm Access Control List</h3>
 <ul>
 <li>Cuộn xuống và tìm <em><strong>Access Control List</strong></em>:
 <ul>
 <li>Kiểm tra thấy Bucket owner enforced</li>
-<li>Có nghĩa ACL đang bị tắt</li>
+<li>Có nghĩa ACL đang bị bắt</li>
 <li>Cần bật ACL trước để sử dụng ACL để làm công khai các objects
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.4-config-bucket-policy-public-object-access/find-ACL.png" alt="find-ACL"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.4-config-bucket-policy-public-object-access/find-ACL.png" alt="find-ACL"  />
+</li>
 </ul>
 </li>
 </ul>
 <h3 id="3-bật-acl">3. Bật ACL</h3>
 <ul>
 <li>Trong Object Ownership: Chọn <em><strong>Edit</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.4-config-bucket-policy-public-object-access/edit.png" alt="edit"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.4-config-bucket-policy-public-object-access/edit.png" alt="edit"  />
+</li>
 <li>Trong giao diện Edit Object Ownership:
 <ul>
 <li>Object Ownership: Chọn ***ACLs enabled ***</li>
 <li>Đánh dấu <em><strong>I acknowledge that ACLs will be restored</strong></em></li>
 <li>Object Ownership: Chọn <em><strong>Bucket owner preferred</strong></em></li>
 <li>Chọn <em><strong>Save changes</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.4-config-bucket-policy-public-object-access/edit-step.png" alt="edit-step"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.4-config-bucket-policy-public-object-access/edit-step.png" alt="edit-step"  />
+</li>
 </ul>
 </li>
 </ul>
 <h3 id="4-xác-minh-cấu-hình-acls">4. Xác minh cấu hình ACLs</h3>
 <ul>
 <li>Kiểm tra trong phần Ownership sẽ thấy ACLs are enabled
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.4-config-bucket-policy-public-object-access/confirm.png" alt="confirm"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.4-config-bucket-policy-public-object-access/confirm.png" alt="confirm"  />
+</li>
 </ul>
 <h3 id="5-public-đối-tượng-sử-dụng-acl">5. Public đối tượng sử dụng ACL</h3>
 <ul>
@@ -1438,7 +1453,10 @@
 <li>Chọn các <em><strong>objects</strong></em> muốn công khai</li>
 <li>Chọn <em><strong>Actions</strong></em> từ thanh công cụ</li>
 <li>Chọn <em><strong>Make public using ACL</strong></em>
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.4-config-bucket-policy-public-object-access/public-ACL.png" alt="public-ACL"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.4-config-bucket-policy-public-object-access/public-ACL.png" alt="public-ACL"  />
+</li>
 </ul>
 </li>
 </ul>
@@ -1448,14 +1466,20 @@
 <ul>
 <li>Xem lại các đối tượng sẽ được công khai</li>
 <li>Chọn <em><strong>Make public</strong></em> để xác nhận
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.4-config-bucket-policy-public-object-access/make-public.png" alt="make-public"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.4-config-bucket-policy-public-object-access/make-public.png" alt="make-public"  />
+</li>
 </ul>
 </li>
 </ul>
 <h3 id="7-xác-minh-cấu-hình-công-khai">7. Xác minh cấu hình công khai</h3>
 <ul>
 <li>Hiển thị thông báo Make public thành công
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.4-config-bucket-policy-public-object-access/make-public-success.png" alt="make-public-success"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.4-config-bucket-policy-public-object-access/make-public-success.png" alt="make-public-success"  />
+</li>
 </ul>
 
 
@@ -2525,19 +2549,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785222250"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785222250"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785222250"></script>
-    <script src="/js/jquery.sticky.js?1785222250"></script>
-    <script src="/js/featherlight.min.js?1785222250"></script>
-    <script src="/js/highlight.pack.js?1785222250"></script>
+    <script src="/js/clipboard.min.js?1785416445"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785416445"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785416445"></script>
+    <script src="/js/jquery.sticky.js?1785416445"></script>
+    <script src="/js/featherlight.min.js?1785416445"></script>
+    <script src="/js/highlight.pack.js?1785416445"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785222250"></script>
-    <script src="/js/learn.js?1785222250"></script>
-    <script src="/js/hugo-learn.js?1785222250"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785416445"></script>
+    <script src="/js/learn.js?1785416445"></script>
+    <script src="/js/hugo-learn.js?1785416445"></script>
 
-    <link href="/mermaid/mermaid.css?1785222250" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1785222250"></script>
+    <link href="/mermaid/mermaid.css?1785416445" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1785416445"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

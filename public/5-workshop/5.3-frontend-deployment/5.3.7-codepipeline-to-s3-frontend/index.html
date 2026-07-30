@@ -15,21 +15,21 @@
     <title>Automatic Deployment with CodePipeline (GitHub → S3) :: Internship Report</title>
 
     
-    <link href="/css/nucleus.css?1785221383" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785221383" rel="stylesheet">
-    <link href="/css/hybrid.css?1785221383" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785221383" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785221383" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785221383" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785221383" rel="stylesheet">
-    <link href="/css/theme.css?1785221383" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785221383" rel="stylesheet">
+    <link href="/css/nucleus.css?1785416443" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785416443" rel="stylesheet">
+    <link href="/css/hybrid.css?1785416443" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785416443" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785416443" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785416443" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785416443" rel="stylesheet">
+    <link href="/css/theme.css?1785416443" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785416443" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1785221383" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1785416443" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1785221383"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785416443"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785221383"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785221383"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785416443"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785416443"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785221383"></script>
+<script type="text/javascript" src="/js/search.js?1785416443"></script>
  
   </div>
 
@@ -1291,7 +1291,7 @@
     <br>
     <b> Last Updated </b> <br>
     <i>
-        <font color=orange>28-07-2026</font>
+        <font color=orange>30-07-2026</font>
     </i>
 </left>
 <left>
@@ -1401,18 +1401,27 @@
 </li>
 <li>
 <p>Select <em><strong>CodePipeline</strong></em>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/find-code-pipeline.png" alt="find-code-pipeline"></p>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/find-code-pipeline.png" alt="find-code-pipeline"  />
+</p>
 </li>
 <li>
 <p>Select <em><strong>Create pipeline</strong></em>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/create-pipeline.png" alt="create-pipeline"></p>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/create-pipeline.png" alt="create-pipeline"  />
+</p>
 </li>
 <li>
 <p>In the Choose creation option interface:</p>
 <ul>
 <li>Category: Select <em><strong>Build custom pipeline</strong></em>.</li>
 <li>Then, click <em><strong>Next</strong></em>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/Choose-creation-option.png" alt="Choose-creation-option"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/Choose-creation-option.png" alt="Choose-creation-option"  />
+</li>
 </ul>
 </li>
 <li>
@@ -1423,7 +1432,10 @@
 <li>Service role: Select <em><strong>New service role</strong></em>.</li>
 <li>Role name: Enter <code>smartdocsai-de-role</code>.</li>
 <li>Then, click <em><strong>Next</strong></em>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/pipeline-setting.png" alt="pipeline-setting"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/pipeline-setting.png" alt="pipeline-setting"  />
+</li>
 </ul>
 </li>
 <li>
@@ -1431,7 +1443,10 @@
 <ul>
 <li>Source provider: Select <em><strong>GitHub (via GitHub App)</strong></em>.</li>
 <li>Connection: Click <em><strong>Connect to GitHub</strong></em>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/add-source-stage.png" alt="add-source-stage"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/add-source-stage.png" alt="add-source-stage"  />
+</li>
 </ul>
 </li>
 <li>
@@ -1440,26 +1455,41 @@
 <li>The <em><strong>Create a connection</strong></em> window will appear.</li>
 <li>Connection name: Enter <code>smartdocsai-github</code>.</li>
 <li>Click <em><strong>Connect to GitHub</strong></em>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/create-a-connection.png" alt="create-a-connection"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/create-a-connection.png" alt="create-a-connection"  />
+</li>
 </ul>
 </li>
 <li>
 <p>Click <em><strong>Authorize</strong></em>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/authorize.png" alt="authorize"></p>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/authorize.png" alt="authorize"  />
+</p>
 </li>
 <li>
 <p>In the Connect to GitHub interface:</p>
 <ul>
 <li>Click <em><strong>Install a new app</strong></em>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/install-a-new-app.png" alt="install-a-new-app"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/install-a-new-app.png" alt="install-a-new-app"  />
+</li>
 <li>Select <em><strong>All repositories</strong></em>.</li>
 <li>Then, click <em><strong>Install &amp; Authorize</strong></em>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/install-and-authorize.png" alt="install-and-authorize"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/install-and-authorize.png" alt="install-and-authorize"  />
+</li>
 </ul>
 </li>
 <li>
 <p>Enter the confirmation code to verify the connection.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/confirm-access.png" alt="confirm-access"></p>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/confirm-access.png" alt="confirm-access"  />
+</p>
 </li>
 <li>
 <p>After the connection is successfully established:</p>
@@ -1467,12 +1497,18 @@
 <li>Return to the Connect to GitHub interface.</li>
 <li>App installation - optional: Select the <em><strong>GitHub account that was just connected</strong></em>.</li>
 <li>Then, click <em><strong>Connect</strong></em>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/connect-github.png" alt="connect-github"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/connect-github.png" alt="connect-github"  />
+</li>
 </ul>
 </li>
 <li>
 <p>The connection is successfully established.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/connect-github-success.png" alt="connect-github-success"></p>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/connect-github-success.png" alt="connect-github-success"  />
+</p>
 </li>
 <li>
 <p>In the Add source stage interface:</p>
@@ -1482,9 +1518,15 @@
 <li>Default branch: Select <strong>main</strong>.</li>
 <li>Output artifact format: Select <em><strong>CodePipeline default</strong></em>.</li>
 <li>Select <em><strong>Enable automatic retry on stage failure</strong></em>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/add-source-stage2.png" alt="add-source-stage2"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/add-source-stage2.png" alt="add-source-stage2"  />
+</li>
 <li>Scroll to the bottom of the page and click <em><strong>Next</strong></em>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/add-source-stage-next.png" alt="add-source-stage-next"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/add-source-stage-next.png" alt="add-source-stage-next"  />
+</li>
 </ul>
 </li>
 <li>
@@ -1493,7 +1535,10 @@
 <li>Build provider: Select <em><strong>Other build providers</strong></em>.</li>
 <li>Select: Choose <em><strong>AWS CodeBuild</strong></em>.</li>
 <li>Project name: Click <em><strong>Create project</strong></em>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/add-build-stage.png" alt="add-build-stage"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/add-build-stage.png" alt="add-build-stage"  />
+</li>
 </ul>
 </li>
 <li>
@@ -1501,7 +1546,10 @@
 <ul>
 <li>Project name: Enter <code>smartdocsai-fe-build</code>.</li>
 <li>Project type: Select <em><strong>Default project</strong></em>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/project-config.png" alt="project-config"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/project-config.png" alt="project-config"  />
+</li>
 </ul>
 </li>
 <li>
@@ -1509,10 +1557,16 @@
 <ul>
 <li>Operating system: Select <em><strong>Ubuntu</strong></em>.</li>
 <li>Image: Select <em><strong>aws/codebuild/standard:8.0</strong></em>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/envi1.png" alt="envi1"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/envi1.png" alt="envi1"  />
+</li>
 <li>Service role: Select <em><strong>new service role</strong></em>.</li>
 <li>Role name: Enter <code>smartdocsai-codebuild-role</code>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/envi2.png" alt="envi2"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/envi2.png" alt="envi2"  />
+</li>
 </ul>
 </li>
 <li>
@@ -1520,7 +1574,10 @@
 <ul>
 <li>Build specification: Select <em><strong>Use a buildspec file</strong></em>.</li>
 <li>Buildspec name - optional: Enter <code>smart-docs-ai/smart-docs-ai/buildspec.yml</code>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/buildspec.png" alt="buildspec"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/buildspec.png" alt="buildspec"  />
+</li>
 </ul>
 </li>
 <li>
@@ -1529,7 +1586,10 @@
 <li>Create the <code>buildspec.yml</code> file in the location shown in the image below.</li>
 <li>Enter the file content as shown in the image.</li>
 <li>Then, push the code to GitHub and make sure that the <code>buildspec.yml</code> file with all required content is available in the GitHub repository.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/content-buildspec.png" alt="content-buildspec"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/content-buildspec.png" alt="content-buildspec"  />
+</li>
 </ul>
 </li>
 <li>
@@ -1538,7 +1598,10 @@
 <li>Select <em><strong>CloudWatch logs - optional</strong></em>.</li>
 <li>Group name - optional: Enter <code>/aws/codebuild/smartdocsai-fe-build</code>.</li>
 <li>Then, click <em><strong>Continue to CodePipeline</strong></em>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/logs.png" alt="logs"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/logs.png" alt="logs"  />
+</li>
 </ul>
 </li>
 <li>
@@ -1546,16 +1609,25 @@
 <ul>
 <li>Project name: Select the <em><strong>smartdocsai-fe-build</strong></em> project that was just created.</li>
 <li>Build type: Select <em><strong>Single build</strong></em>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/single-build.png" alt="single-build"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/single-build.png" alt="single-build"  />
+</li>
 <li>Scroll to the bottom of the page and click <em><strong>Next</strong></em>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/single-build-next.png" alt="single-build-next"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/single-build-next.png" alt="single-build-next"  />
+</li>
 </ul>
 </li>
 <li>
 <p>In the Add test stage - optional interface:</p>
 <ul>
 <li>Select <em><strong>Skip test stage</strong></em>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/add-test-stage.png" alt="add-test-stage"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/add-test-stage.png" alt="add-test-stage"  />
+</li>
 </ul>
 </li>
 <li>
@@ -1566,29 +1638,47 @@
 <li>Deployment path - optional: Enter <code>smartdocsai-fe.zip</code>.</li>
 <li>Select <em><strong>Extract file before deploy</strong></em>.</li>
 <li>Click <em><strong>Next</strong></em>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/add-deploy-stage.png" alt="add-deploy-stage"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/add-deploy-stage.png" alt="add-deploy-stage"  />
+</li>
 </ul>
 </li>
 <li>
 <p>In the Review interface:</p>
 <ul>
 <li>Review the CodePipeline configuration.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/review-pipeline.png" alt="review-pipeline"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/review-pipeline.png" alt="review-pipeline"  />
+</li>
 <li>Scroll to the bottom of the page and click <em><strong>Create pipeline</strong></em>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/step6-create-pipeline.png" alt="step6-create-pipeline"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/step6-create-pipeline.png" alt="step6-create-pipeline"  />
+</li>
 </ul>
 </li>
 <li>
 <p>The pipeline will display a <em><strong>build/deploy</strong></em> status.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/build-deploy.png" alt="build-deploy"></p>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/build-deploy.png" alt="build-deploy"  />
+</p>
 </li>
 <li>
 <p>The CodePipeline deployment completes successfully.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/deploy-success.png" alt="deploy-success"></p>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/deploy-success.png" alt="deploy-success"  />
+</p>
 </li>
 <li>
 <p><strong>Note:</strong> Delete the old files in the Frontend S3 bucket. When CodePipeline deploys the application, the files will be recreated automatically.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/delete-old-file.png" alt="delete-old-file"></p>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/delete-old-file.png" alt="delete-old-file"  />
+</p>
 </li>
 </ul>
 <h3 id="2-create-an-origin-path-for-cloudfront">2. Create an Origin Path for CloudFront</h3>
@@ -1599,16 +1689,25 @@
 <li>Select the <em><strong>Origins</strong></em> tab.</li>
 <li>Select the CloudFront distribution as shown in the image below.</li>
 <li>Click <em><strong>Edit</strong></em>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/tab-origin.png" alt="tab-origin"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/tab-origin.png" alt="tab-origin"  />
+</li>
 </ul>
 </li>
 <li>
 <p>In the Edit origin interface:</p>
 <ul>
 <li>Origin path: Enter <code>/smartdocsai-fe-zip</code>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/origin-path.png" alt="origin-path"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/origin-path.png" alt="origin-path"  />
+</li>
 <li>Scroll to the bottom of the page and click <em><strong>Save changes</strong></em>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/save-origin-path.png" alt="save-origin-path"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/save-origin-path.png" alt="save-origin-path"  />
+</li>
 </ul>
 </li>
 </ul>
@@ -1619,7 +1718,10 @@
 <ul>
 <li>Select the <em><strong>Invalidations</strong></em> tab.</li>
 <li>Click <em><strong>Create invalidation</strong></em>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/tab-invalidation.png" alt="tab-invalidation"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/tab-invalidation.png" alt="tab-invalidation"  />
+</li>
 </ul>
 </li>
 <li>
@@ -1628,14 +1730,23 @@
 <li>Selection method: Select <strong>By paths</strong>.</li>
 <li>Object paths to invalidate: Enter <code>/*</code>.</li>
 <li>Then, click <strong>Create invalidation</strong>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/create-invalidation.png" alt="create-invalidation"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/create-invalidation.png" alt="create-invalidation"  />
+</li>
 <li>A notification confirms that the invalidation was created successfully.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/create-invalidation-success.png" alt="create-invalidation-success"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/create-invalidation-success.png" alt="create-invalidation-success"  />
+</li>
 </ul>
 </li>
 <li>
 <p>In the CloudFront interface, verify that the Origin path has been updated.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/origin-path-updated.png" alt="origin-path-updated"></p>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/origin-path-updated.png" alt="origin-path-updated"  />
+</p>
 </li>
 </ul>
 <h3 id="4-create-an-automatic-invalidation-for-cloudfront">4. Create an Automatic Invalidation for CloudFront</h3>
@@ -1643,27 +1754,42 @@
 <ul>
 <li>
 <p>Access the CloudFront distribution and copy the Distribution ID.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/distribution-id.png" alt="distribution-id"></p>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/distribution-id.png" alt="distribution-id"  />
+</p>
 </li>
 <li>
 <p>Search for <code>IAM</code> in the <strong>AWS Console</strong> search bar.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/find-IAM.png" alt="find-IAM"></p>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/find-IAM.png" alt="find-IAM"  />
+</p>
 </li>
 <li>
 <p>In the IAM interface:</p>
 <ul>
 <li>Select <strong>Roles</strong>.</li>
 <li>Select the <strong>codebuild-smartdocsai-fe-build-service-role</strong> role.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/role-name.png" alt="role-name"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/role-name.png" alt="role-name"  />
+</li>
 </ul>
 </li>
 <li>
 <p>In the selected role:</p>
 <ul>
 <li>Select <strong>Add permissions</strong>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/permission-tab.png" alt="permission-tab"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/permission-tab.png" alt="permission-tab"  />
+</li>
 <li>Select <strong>Create inline policy</strong>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/create-inline-policy.png" alt="create-inline-policy"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/create-inline-policy.png" alt="create-inline-policy"  />
+</li>
 </ul>
 </li>
 <li>
@@ -1688,23 +1814,35 @@
 </ul>
 </li>
 </ul>
-<p><img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/specify-permission.png" alt="specify-permission"></p>
+<p>
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/specify-permission.png" alt="specify-permission"  />
+</p>
 <ul>
 <li>
 <p>Scroll to the bottom of the page and click <strong>Next</strong>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/specify-permission-next.png" alt="specify-permission-next"></p>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/specify-permission-next.png" alt="specify-permission-next"  />
+</p>
 </li>
 <li>
 <p>In the Review and create interface:</p>
 <ul>
 <li>Policy name: Enter <code>AllowCloudfrontInvalidatio</code>.</li>
 <li>Then, click <strong>Create policy</strong>.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/review-and-create-policy.png" alt="review-and-create-policy"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/review-and-create-policy.png" alt="review-and-create-policy"  />
+</li>
 </ul>
 </li>
 <li>
 <p>After completing this step, the role has permission to create CloudFront invalidations.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/policy-invalidation-success.png" alt="policy-invalidation-success"></p>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/policy-invalidation-success.png" alt="policy-invalidation-success"  />
+</p>
 </li>
 <li>
 <p>Edit the <strong>buildspec.yml</strong> file in the repository and add the invalidation command:</p>
@@ -1739,13 +1877,19 @@ files:
 <ul>
 <li>
 <p>Access CloudFront and copy the Distribution domain name.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/copy-cloudfront-domain.png" alt="copy-cloudfront-domain"></p>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/copy-cloudfront-domain.png" alt="copy-cloudfront-domain"  />
+</p>
 </li>
 <li>
 <p>Paste the URL into a new browser tab.</p>
 <ul>
 <li>At this point, pay attention to the <strong>&ldquo;Đăng ký ngay&rdquo;</strong> text in the login form.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/before-fe.png" alt="before-fe"></li>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/before-fe.png" alt="before-fe"  />
+</li>
 </ul>
 </li>
 <li>
@@ -1753,11 +1897,17 @@ files:
 </li>
 <li>
 <p>Then, push the code to GitHub.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/code-edit.png" alt="code-edit"></p>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/code-edit.png" alt="code-edit"  />
+</p>
 </li>
 <li>
 <p>Wait for a while for CodePipeline to redeploy the application. The interface will then be updated according to the new code.
-<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/after-fe.png" alt="after-fe"></p>
+
+
+<img src="/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/after-fe.png" alt="after-fe"  />
+</p>
 </li>
 </ul>
 
@@ -2828,19 +2978,19 @@ files:
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785221383"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785221383"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785221383"></script>
-    <script src="/js/jquery.sticky.js?1785221383"></script>
-    <script src="/js/featherlight.min.js?1785221383"></script>
-    <script src="/js/highlight.pack.js?1785221383"></script>
+    <script src="/js/clipboard.min.js?1785416443"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785416443"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785416443"></script>
+    <script src="/js/jquery.sticky.js?1785416443"></script>
+    <script src="/js/featherlight.min.js?1785416443"></script>
+    <script src="/js/highlight.pack.js?1785416443"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785221383"></script>
-    <script src="/js/learn.js?1785221383"></script>
-    <script src="/js/hugo-learn.js?1785221383"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785416443"></script>
+    <script src="/js/learn.js?1785416443"></script>
+    <script src="/js/hugo-learn.js?1785416443"></script>
 
-    <link href="/mermaid/mermaid.css?1785221383" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1785221383"></script>
+    <link href="/mermaid/mermaid.css?1785416443" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1785416443"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

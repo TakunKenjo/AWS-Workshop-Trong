@@ -15,21 +15,21 @@
     <title>Kiến trúc tổng thể trên AWS :: Báo cáo thực tập</title>
 
     
-    <link href="/css/nucleus.css?1785221385" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785221385" rel="stylesheet">
-    <link href="/css/hybrid.css?1785221385" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785221385" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785221385" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785221385" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785221385" rel="stylesheet">
-    <link href="/css/theme.css?1785221385" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785221385" rel="stylesheet">
+    <link href="/css/nucleus.css?1785416444" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785416444" rel="stylesheet">
+    <link href="/css/hybrid.css?1785416444" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785416444" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785416444" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785416444" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785416444" rel="stylesheet">
+    <link href="/css/theme.css?1785416444" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785416444" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1785221385" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1785416444" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1785221385"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785416444"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785221385"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785221385"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785416444"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785416444"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785221385"></script>
+<script type="text/javascript" src="/js/search.js?1785416444"></script>
  
   </div>
 
@@ -1291,7 +1291,7 @@
     <br>
     <b> Last Updated </b> <br>
     <i>
-        <font color=orange>28-07-2026</font>
+        <font color=orange>30-07-2026</font>
     </i>
 </left>
 <left>
@@ -1395,7 +1395,10 @@
 
 	<p>Sau khi tìm hiểu riêng kiến trúc Frontend và Backend ở 2 phần trước, phần này tổng hợp lại thành <strong>bức tranh toàn cảnh</strong> cách các thành phần AWS phối hợp với nhau để tạo thành hệ thống SmartDocAI hoàn chỉnh, cùng với cấu trúc lưu trữ dữ liệu per-user.</p>
 <h3 id="1-sơ-đồ-kiến-trúc-tổng-thể">1. Sơ đồ kiến trúc tổng thể</h3>
-<img src="/images/5-Workshop/5.1-Workshop-overview/5.1.3-overall-aws-architecture/architecture-diagram.png" width="100%" style="max-width:1100px">
+<p>
+
+<img src="/images/5-Workshop/5.1-Workshop-overview/5.1.3-overall-aws-architecture/architecture-diagram.png" alt="Sơ đồ kiến trúc tổng thể"  />
+</p>
 <p><strong>Chú thích luồng theo số thứ tự trong sơ đồ:</strong></p>
 <table>
   <thead>
@@ -1411,19 +1414,19 @@
           <td>1</td>
           <td>Users → CloudFront</td>
           <td>9</td>
-          <td>GitHub Repository → CodePipeline (Backend)</td>
+          <td>GitHub Repository → CodePipeline (Backend) &amp; (Frontend)</td>
       </tr>
       <tr>
           <td>2</td>
           <td>CloudFront → S3 Frontend Bucket</td>
           <td>10</td>
-          <td>CodePipeline (Backend) → CodeBuild</td>
+          <td>CodePipeline (Backend) → CodeBuild (pytest)</td>
       </tr>
       <tr>
           <td>3</td>
           <td>CloudFront → API Gateway (proxy <code>/api/*</code>)</td>
           <td>11</td>
-          <td>CodeBuild → Amazon ECR</td>
+          <td>CodeBuild (pytest) → Amazon ECR</td>
       </tr>
       <tr>
           <td>4</td>
@@ -1435,13 +1438,13 @@
           <td>5</td>
           <td>Lambda → Cognito User Pool (validate JWT)</td>
           <td>13</td>
-          <td>GitHub Repository → CodePipeline (Frontend)</td>
+          <td>CodePipeline (Frontend) → AWS CodeBuild</td>
       </tr>
       <tr>
           <td>6</td>
           <td>Lambda → Data Storage (DynamoDB + S3)</td>
           <td>14</td>
-          <td>CodePipeline (Frontend) → S3 Frontend Bucket</td>
+          <td>AWS CodeBuild (Frontend) → S3 Frontend Bucket</td>
       </tr>
       <tr>
           <td>7</td>
@@ -1457,9 +1460,6 @@
       </tr>
   </tbody>
 </table>
-<blockquote>
-<p>Sơ đồ được tách thành <strong>2 CodePipeline riêng biệt</strong>: CodePipeline (Backend) trong khung &ldquo;CI/CD Pipeline (backend)&rdquo; xử lý build/test/deploy Lambda; CodePipeline (Frontend) đặt ngay trong khung &ldquo;Frontend (CDN + Static Hosting)&rdquo;, deploy thẳng lên S3 Frontend Bucket. Cả hai đều nhận code từ cùng 1 GitHub repository (2 mũi tên 9 và 13). Sơ đồ cũng được bọc trong khung <strong>Region: us-east-1</strong>, và có thêm khung <strong>Generic Group (Account-wide)</strong> chứa IAM Roles + AWS KMS — các thành phần dùng chung toàn tài khoản, không thuộc riêng tầng nào.</p>
-</blockquote>
 <p>SmartDocAI được xây dựng theo mô hình <strong>Serverless Container Architecture</strong> kết hợp <strong>Managed Identity (Cognito)</strong>, gồm các thành phần chính:</p>
 <table>
   <thead>
@@ -1538,7 +1538,10 @@
   </tbody>
 </table>
 <h3 id="2-cấu-trúc-lưu-trữ-dữ-liệu-storage-structure">2. Cấu trúc lưu trữ dữ liệu (Storage Structure)</h3>
-<img src="/images/5-Workshop/5.1-Workshop-overview/5.1.3-overall-aws-architecture/storage-structure.png" width="110%" style="max-width:900px">
+<p>
+
+<img src="/images/5-Workshop/5.1-Workshop-overview/5.1.3-overall-aws-architecture/storage-structure.png" alt="Cấu trúc lưu trữ dữ liệu"  />
+</p>
 <p>Toàn bộ dữ liệu được thiết kế <strong>cô lập theo từng user</strong> (<code>user_id</code> = Cognito <code>sub</code>), tránh rò rỉ dữ liệu chéo giữa các tài khoản:</p>
 <ul>
 <li><code>uploads/{user_id}/</code> — tài liệu gốc (PDF/DOCX) người dùng tải lên</li>
@@ -1548,14 +1551,20 @@
 <li>DynamoDB <code>smartdocai-user-profiles</code> (partition key <code>user_id</code>) — chỉ lưu <code>avatar_url</code> (các thông tin còn lại như họ tên, SĐT, ngày sinh đã lưu trực tiếp trong Cognito attributes để tránh 2 nơi lưu bị lệch dữ liệu)</li>
 </ul>
 <h3 id="3-module-hóa-backend-lambda-modules">3. Module hóa Backend (Lambda Modules)</h3>
-<img src="/images/5-Workshop/5.1-Workshop-overview/5.1.3-overall-aws-architecture/lambda-modules.png" width="110%" style="max-width:1300px">
+<p>
+
+<img src="/images/5-Workshop/5.1-Workshop-overview/5.1.3-overall-aws-architecture/lambda-modules.png" alt="Module hóa Backend Lambda"  />
+</p>
 <p><code>app_api.py</code> đóng vai trò entry point chính (FastAPI + Mangum adapter), điều hướng request tới các module chuyên biệt trong <code>modules/</code>: <code>auth_service.py</code> (xác thực), <code>document_processor.py</code> + <code>vector_store.py</code> (xử lý &amp; lập chỉ mục tài liệu), <code>rag_chain.py</code> + <code>self_rag.py</code> + <code>co_rag.py</code> (3 chế độ RAG), <code>profile_service.py</code> (hồ sơ cá nhân).</p>
 <h3 id="4-cicd-pipeline">4. CI/CD Pipeline</h3>
-<img src="/images/5-Workshop/5.1-Workshop-overview/5.1.3-overall-aws-architecture/cicd-pipeline.png" width="100%" style="max-width:1100px">
+<p>
+
+<img src="/images/5-Workshop/5.1-Workshop-overview/5.1.3-overall-aws-architecture/cicd-pipeline.png" alt="CI/CD Pipeline"  />
+</p>
 <p>Hệ thống có <strong>2 CodePipeline tách biệt</strong>, cùng nhận code từ 1 GitHub repository:</p>
 <ul>
 <li><strong>CodePipeline (Backend)</strong> <code>smartdocai-be-pipeline</code>: Mỗi lần push code lên nhánh <code>main</code>, tự động kích hoạt CodeBuild: cài dependencies → lint bằng flake8 → chạy pytest (hard-fail nếu test không qua) → build Docker image → đẩy lên ECR → cập nhật Lambda function. Cơ chế này đảm bảo code lỗi không thể lọt vào production.</li>
-<li><strong>CodePipeline (Frontend)</strong> <code>smartdocsai-fe-pipeline</code>: build ứng dụng React/Vite và deploy thẳng kết quả lên S3 Frontend Bucket, không qua bước test/CodeBuild riêng vì chỉ là static file.</li>
+<li><strong>CodePipeline (Frontend)</strong> <code>smartdocsai-fe-pipeline</code>: gồm 3 stage <strong>Source → Build → Deploy</strong>. Stage Build dùng <strong>AWS CodeBuild</strong> (project <code>smartdocsai-fe-build</code>, chạy theo <code>buildspec.yml</code>) để cài dependencies và build ứng dụng React/Vite, đóng gói kết quả thành <code>smartdocsai-fe.zip</code>; stage Deploy sau đó đẩy thẳng file này lên S3 Frontend Bucket (tự động giải nén). Khi tạo pipeline, stage Test được chọn <strong>Skip test stage</strong> vì frontend chưa có bộ test tự động riêng, khác với Backend luôn bắt buộc pytest phải pass.</li>
 </ul>
 
 
@@ -2622,19 +2631,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785221385"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785221385"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785221385"></script>
-    <script src="/js/jquery.sticky.js?1785221385"></script>
-    <script src="/js/featherlight.min.js?1785221385"></script>
-    <script src="/js/highlight.pack.js?1785221385"></script>
+    <script src="/js/clipboard.min.js?1785416445"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785416445"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785416445"></script>
+    <script src="/js/jquery.sticky.js?1785416445"></script>
+    <script src="/js/featherlight.min.js?1785416445"></script>
+    <script src="/js/highlight.pack.js?1785416445"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785221385"></script>
-    <script src="/js/learn.js?1785221385"></script>
-    <script src="/js/hugo-learn.js?1785221385"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785416445"></script>
+    <script src="/js/learn.js?1785416445"></script>
+    <script src="/js/hugo-learn.js?1785416445"></script>
 
-    <link href="/mermaid/mermaid.css?1785221385" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1785221385"></script>
+    <link href="/mermaid/mermaid.css?1785416445" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1785416445"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

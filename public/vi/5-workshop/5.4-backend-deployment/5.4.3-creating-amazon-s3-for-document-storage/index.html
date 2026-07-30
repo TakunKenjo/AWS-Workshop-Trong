@@ -15,21 +15,21 @@
     <title>Tạo Amazon S3 lưu trữ tài liệu :: Báo cáo thực tập</title>
 
     
-    <link href="/css/nucleus.css?1785221385" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785221385" rel="stylesheet">
-    <link href="/css/hybrid.css?1785221385" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785221385" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785221385" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785221385" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785221385" rel="stylesheet">
-    <link href="/css/theme.css?1785221385" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785221385" rel="stylesheet">
+    <link href="/css/nucleus.css?1785416445" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785416445" rel="stylesheet">
+    <link href="/css/hybrid.css?1785416445" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785416445" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785416445" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785416445" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785416445" rel="stylesheet">
+    <link href="/css/theme.css?1785416445" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785416445" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1785221385" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1785416445" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1785221385"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785416445"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785221385"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785221385"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785416445"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785416445"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785221385"></script>
+<script type="text/javascript" src="/js/search.js?1785416445"></script>
  
   </div>
 
@@ -1291,7 +1291,7 @@
     <br>
     <b> Last Updated </b> <br>
     <i>
-        <font color=orange>28-07-2026</font>
+        <font color=orange>30-07-2026</font>
     </i>
 </left>
 <left>
@@ -1395,10 +1395,16 @@
 
 
 	<h3 id="1-khai-báo-tên-bucket-và-region">1. Khai báo Tên Bucket và Region</h3>
-<p><img src="/images/5-Workshop/5.4-Backend-deployment/5.4.3-creating-amazon-S3-for-document-storage/image5.png" alt="image5.png"></p>
+<p>
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.3-creating-amazon-S3-for-document-storage/image5.png" alt="image5.png"  />
+</p>
 <hr>
 <h3 id="2-chạy-lệnh-tạo-s3-bucket">2. Chạy lệnh Tạo S3 Bucket</h3>
-<p><img src="/images/5-Workshop/5.4-Backend-deployment/5.4.3-creating-amazon-S3-for-document-storage/image6.png" alt="image6.png"></p>
+<p>
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.3-creating-amazon-S3-for-document-storage/image6.png" alt="image6.png"  />
+</p>
 <hr>
 <h3 id="3-cấu-hình-cors-security-hardening-cho-phép-frontend-tảitải-lên-tài-liệu">3. Cấu hình CORS Security Hardening (Cho phép Frontend Tải/Tải lên tài liệu)</h3>
 <p>Để đảm bảo an toàn bảo mật dữ liệu và phòng chống tấn công Cross-Origin trái phép, chính sách S3 CORS không sử dụng ký tự đại diện <code>AllowedOrigins: [&quot;*&quot;]</code> mà giới hạn nghiêm ngặt theo danh sách tên miền tin cậy:</p>
@@ -1426,13 +1432,22 @@
 </span></span></code></pre></div><h3 id="4-cấu-hình-phân-quyền-iam-role-cho-aws-lambda">4. Cấu hình Phân Quyền IAM Role cho AWS Lambda</h3>
 <p>Đảm bảo IAM Role chạy Lambda Function (ví dụ: <code>smartdocai-lambda-role</code>) được đính kèm Policy truy cập S3.</p>
 <p>Chạy lệnh gán quyền <code>AmazonS3FullAccess</code> cho Lambda Role:</p>
-<p><img src="/images/5-Workshop/5.4-Backend-deployment/5.4.3-creating-amazon-S3-for-document-storage/image9.png" alt="image9.png"></p>
+<p>
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.3-creating-amazon-S3-for-document-storage/image9.png" alt="image9.png"  />
+</p>
 <p><strong>Kết quả:</strong></p>
-<p><img src="/images/5-Workshop/5.4-Backend-deployment/5.4.3-creating-amazon-S3-for-document-storage/image10.png" alt="image10.png"></p>
+<p>
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.3-creating-amazon-S3-for-document-storage/image10.png" alt="image10.png"  />
+</p>
 <hr>
 <h3 id="5-cấu-trúc-thư-mục-lưu-trữ-amazon-s3-per-user-isolation">5. Cấu Trúc Thư Mục Lưu Trữ Amazon S3 (Per-User Isolation)</h3>
 <p>Hệ thống lưu trữ tài liệu gốc, vector index và toàn bộ JSON metadata của người dùng trực tiếp trên S3 phân lập theo <code>user_id</code>:</p>
-<p><img src="/images/5-Workshop/5.4-Backend-deployment/5.4.3-creating-amazon-S3-for-document-storage/image11.png" alt="image11.png"></p>
+<p>
+
+<img src="/images/5-Workshop/5.4-Backend-deployment/5.4.3-creating-amazon-S3-for-document-storage/image11.png" alt="image11.png"  />
+</p>
 <table>
   <thead>
       <tr>
@@ -2549,19 +2564,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785221385"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785221385"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785221385"></script>
-    <script src="/js/jquery.sticky.js?1785221385"></script>
-    <script src="/js/featherlight.min.js?1785221385"></script>
-    <script src="/js/highlight.pack.js?1785221385"></script>
+    <script src="/js/clipboard.min.js?1785416445"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785416445"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785416445"></script>
+    <script src="/js/jquery.sticky.js?1785416445"></script>
+    <script src="/js/featherlight.min.js?1785416445"></script>
+    <script src="/js/highlight.pack.js?1785416445"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785221385"></script>
-    <script src="/js/learn.js?1785221385"></script>
-    <script src="/js/hugo-learn.js?1785221385"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785416445"></script>
+    <script src="/js/learn.js?1785416445"></script>
+    <script src="/js/hugo-learn.js?1785416445"></script>
 
-    <link href="/mermaid/mermaid.css?1785221385" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1785221385"></script>
+    <link href="/mermaid/mermaid.css?1785416445" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1785416445"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

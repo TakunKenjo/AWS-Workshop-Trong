@@ -15,21 +15,21 @@
     <title>Overall Architecture on AWS :: Internship Report</title>
 
     
-    <link href="/css/nucleus.css?1785221383" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785221383" rel="stylesheet">
-    <link href="/css/hybrid.css?1785221383" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785221383" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785221383" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785221383" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785221383" rel="stylesheet">
-    <link href="/css/theme.css?1785221383" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785221383" rel="stylesheet">
+    <link href="/css/nucleus.css?1785416442" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785416442" rel="stylesheet">
+    <link href="/css/hybrid.css?1785416442" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785416442" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785416442" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785416442" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785416442" rel="stylesheet">
+    <link href="/css/theme.css?1785416442" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785416442" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1785221383" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1785416442" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1785221383"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785416442"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785221383"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785221383"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785416442"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785416442"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785221383"></script>
+<script type="text/javascript" src="/js/search.js?1785416442"></script>
  
   </div>
 
@@ -1291,7 +1291,7 @@
     <br>
     <b> Last Updated </b> <br>
     <i>
-        <font color=orange>28-07-2026</font>
+        <font color=orange>30-07-2026</font>
     </i>
 </left>
 <left>
@@ -1395,7 +1395,10 @@
 
 	<p>After exploring the Frontend and Backend architecture separately in the previous two sections, this section brings everything together into a <strong>complete picture</strong> of how the AWS components work together to form the full SmartDocAI system, along with the per-user data storage structure.</p>
 <h3 id="1-overall-architecture-diagram">1. Overall Architecture Diagram</h3>
-<img src="/images/5-Workshop/5.1-Workshop-overview/5.1.3-overall-aws-architecture/architecture-diagram.png" width="100%" style="max-width:1100px">
+<p>
+
+<img src="/images/5-Workshop/5.1-Workshop-overview/5.1.3-overall-aws-architecture/architecture-diagram.png" alt="Overall Architecture Diagram"  />
+</p>
 <p><strong>Flow legend (numbered in the diagram):</strong></p>
 <table>
   <thead>
@@ -1411,19 +1414,19 @@
           <td>1</td>
           <td>Users → CloudFront</td>
           <td>9</td>
-          <td>GitHub Repository → CodePipeline (Backend)</td>
+          <td>GitHub Repository → CodePipeline (Backend) &amp; (Frontend)</td>
       </tr>
       <tr>
           <td>2</td>
           <td>CloudFront → S3 Frontend Bucket</td>
           <td>10</td>
-          <td>CodePipeline (Backend) → CodeBuild</td>
+          <td>CodePipeline (Backend) → CodeBuild (pytest)</td>
       </tr>
       <tr>
           <td>3</td>
           <td>CloudFront → API Gateway (proxy <code>/api/*</code>)</td>
           <td>11</td>
-          <td>CodeBuild → Amazon ECR</td>
+          <td>CodeBuild (pytest) → Amazon ECR</td>
       </tr>
       <tr>
           <td>4</td>
@@ -1435,13 +1438,13 @@
           <td>5</td>
           <td>Lambda → Cognito User Pool (validate JWT)</td>
           <td>13</td>
-          <td>GitHub Repository → CodePipeline (Frontend)</td>
+          <td>CodePipeline (Frontend) → AWS CodeBuild</td>
       </tr>
       <tr>
           <td>6</td>
           <td>Lambda → Data Storage (DynamoDB + S3)</td>
           <td>14</td>
-          <td>CodePipeline (Frontend) → S3 Frontend Bucket</td>
+          <td>AWS CodeBuild (Frontend) → S3 Frontend Bucket</td>
       </tr>
       <tr>
           <td>7</td>
@@ -1457,9 +1460,6 @@
       </tr>
   </tbody>
 </table>
-<blockquote>
-<p>The diagram is split into <strong>2 separate CodePipelines</strong>: CodePipeline (Backend) inside the &ldquo;CI/CD Pipeline (backend)&rdquo; group handles build/test/deploy to Lambda; CodePipeline (Frontend) sits inside the &ldquo;Frontend (CDN + Static Hosting)&rdquo; group and deploys straight to the S3 Frontend Bucket. Both receive code from the same GitHub repository (arrows 9 and 13). The diagram is also wrapped in a <strong>Region: us-east-1</strong> boundary, plus a <strong>Generic Group (Account-wide)</strong> box containing IAM Roles + AWS KMS — account-wide components that don&rsquo;t belong to any single tier.</p>
-</blockquote>
 <p>SmartDocAI is built on a <strong>Serverless Container Architecture</strong> combined with <strong>Managed Identity (Cognito)</strong>, consisting of the following main components:</p>
 <table>
   <thead>
@@ -1538,7 +1538,10 @@
   </tbody>
 </table>
 <h3 id="2-data-storage-structure">2. Data Storage Structure</h3>
-<img src="/images/5-Workshop/5.1-Workshop-overview/5.1.3-overall-aws-architecture/storage-structure.png" width="110%" style="max-width:900px">
+<p>
+
+<img src="/images/5-Workshop/5.1-Workshop-overview/5.1.3-overall-aws-architecture/storage-structure.png" alt="Data Storage Structure"  />
+</p>
 <p>All data is designed to be <strong>isolated per user</strong> (<code>user_id</code> = Cognito <code>sub</code>), preventing cross-account data leaks:</p>
 <ul>
 <li><code>uploads/{user_id}/</code> — original documents (PDF/DOCX) uploaded by the user</li>
@@ -1548,14 +1551,20 @@
 <li>DynamoDB <code>smartdocai-user-profiles</code> (partition key <code>user_id</code>) — stores only the <code>avatar_url</code> field (other personal information such as full name, phone number, date of birth is stored directly in Cognito attributes to avoid data mismatch between two storage locations)</li>
 </ul>
 <h3 id="3-backend-modularization-lambda-modules">3. Backend Modularization (Lambda Modules)</h3>
-<img src="/images/5-Workshop/5.1-Workshop-overview/5.1.3-overall-aws-architecture/lambda-modules.png" width="110%" style="max-width:1300px">
+<p>
+
+<img src="/images/5-Workshop/5.1-Workshop-overview/5.1.3-overall-aws-architecture/lambda-modules.png" alt="Backend Modularization Lambda Modules"  />
+</p>
 <p><code>app_api.py</code> serves as the main entry point (FastAPI + Mangum adapter), routing requests to specialized modules under <code>modules/</code>: <code>auth_service.py</code> (authentication), <code>document_processor.py</code> + <code>vector_store.py</code> (document processing &amp; indexing), <code>rag_chain.py</code> + <code>self_rag.py</code> + <code>co_rag.py</code> (3 RAG modes), <code>profile_service.py</code> (user profile).</p>
 <h3 id="4-cicd-pipeline">4. CI/CD Pipeline</h3>
-<img src="/images/5-Workshop/5.1-Workshop-overview/5.1.3-overall-aws-architecture/cicd-pipeline.png" width="100%" style="max-width:1100px">
+<p>
+
+<img src="/images/5-Workshop/5.1-Workshop-overview/5.1.3-overall-aws-architecture/cicd-pipeline.png" alt="CI/CD Pipeline"  />
+</p>
 <p>The system has <strong>2 separate CodePipelines</strong>, both receiving code from the same GitHub repository:</p>
 <ul>
 <li><strong>CodePipeline (Backend)</strong> <code>smartdocai-be-pipeline</code>: Every time code is pushed to the <code>main</code> branch, it automatically triggers CodeBuild: install dependencies → lint with flake8 → run pytest (hard-fail if tests do not pass) → build Docker image → push to ECR → update the Lambda function. This mechanism ensures that broken code cannot make it into production.</li>
-<li><strong>CodePipeline (Frontend)</strong> <code>smartdocsai-fe-pipeline</code>: builds the React/Vite application and deploys the result straight to the S3 Frontend Bucket, without a separate test/CodeBuild step since it&rsquo;s just static files.</li>
+<li><strong>CodePipeline (Frontend)</strong> <code>smartdocsai-fe-pipeline</code>: has 3 stages, <strong>Source → Build → Deploy</strong>. The Build stage uses <strong>AWS CodeBuild</strong> (project <code>smartdocsai-fe-build</code>, driven by a <code>buildspec.yml</code>) to install dependencies and build the React/Vite app, packaging the output as <code>smartdocsai-fe.zip</code>; the Deploy stage then pushes that file straight to the S3 Frontend Bucket (auto-extracted). When the pipeline was created, the Test stage was set to <strong>Skip test stage</strong> since the frontend doesn&rsquo;t have its own automated test suite yet, unlike the Backend pipeline where pytest is a mandatory gate.</li>
 </ul>
 
 
@@ -2622,19 +2631,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785221383"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785221383"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785221383"></script>
-    <script src="/js/jquery.sticky.js?1785221383"></script>
-    <script src="/js/featherlight.min.js?1785221383"></script>
-    <script src="/js/highlight.pack.js?1785221383"></script>
+    <script src="/js/clipboard.min.js?1785416442"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785416442"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785416442"></script>
+    <script src="/js/jquery.sticky.js?1785416442"></script>
+    <script src="/js/featherlight.min.js?1785416442"></script>
+    <script src="/js/highlight.pack.js?1785416442"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785221383"></script>
-    <script src="/js/learn.js?1785221383"></script>
-    <script src="/js/hugo-learn.js?1785221383"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785416442"></script>
+    <script src="/js/learn.js?1785416442"></script>
+    <script src="/js/hugo-learn.js?1785416442"></script>
 
-    <link href="/mermaid/mermaid.css?1785221383" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1785221383"></script>
+    <link href="/mermaid/mermaid.css?1785416442" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1785416442"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
