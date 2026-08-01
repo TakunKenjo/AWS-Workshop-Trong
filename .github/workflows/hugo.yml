@@ -32,3 +32,4 @@ jobs:
           publish_dir: ./public
           publish_branch: gh-pages # <- đảm bảo đúng tên nhánh bạn dùng để deploy
           force_orphan: true # <- đảm bảo xóa lịch sử cũ ở nhánh gh-pages (giảm lỗi)
+          submodules: true 
