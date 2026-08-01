@@ -40,7 +40,7 @@ This anti-phishing solution uses Amazon Bedrock to access advanced foundation mo
   - **From 30 to below 70 (Suspicious):** The email is quarantined for manual review by the cybersecurity team.
   - **70 and above (Dangerous):** The email is completely blocked before reaching the end user.
 
-![Hình minh họa](/images/3-BlogsPosted/3.1-Blog1/blog1.png)
+![Hình minh họa](/images/3-BlogsPosted/3.1-Blog1/blog2.png)
 
 ## Deployment and Operational Characteristics
 
