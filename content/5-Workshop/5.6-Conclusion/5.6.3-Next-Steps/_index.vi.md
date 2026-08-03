@@ -54,7 +54,7 @@ Workshop đã hoàn thành mục tiêu triển khai và kiểm thử SmartDocAI 
 
 Nếu có câu hỏi hoặc góp ý về workshop này, vui lòng liên hệ:
 
-- **Email:** 12345levan@gmail.com
+- **Email:** trongngo.02092004@gmail.com
 - **GitHub:** [@TakunKenjo](https://github.com/TakunKenjo)
 - **Kho mã nguồn Workshop:** [Workshop-AWS-Group-Report](https://github.com/TakunKenjo/Workshop-AWS-Group-Report)
 

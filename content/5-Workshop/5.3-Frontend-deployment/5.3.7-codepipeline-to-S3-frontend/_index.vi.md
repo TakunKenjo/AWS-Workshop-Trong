@@ -156,7 +156,7 @@ Bước này sẽ gán quyền cloudfront: CreateInvalidation cho Service role
 ![create-inline-policy](/images/5-Workshop/5.3-Frontend-deployment/5.3.7-codepipeline-to-S3-frontend/create-inline-policy.png)
 - Trong giao diện Specify permissons:
   - Chọn **JSON**
-  - Nhập đoạn mã sau nào Policy editor
+  - Nhập đoạn mã sau vào Policy editor
     ```
     {
         "Version": "2012-10-17",

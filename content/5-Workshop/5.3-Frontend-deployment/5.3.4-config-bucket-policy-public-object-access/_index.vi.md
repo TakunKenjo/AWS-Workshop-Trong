@@ -11,7 +11,7 @@ pre : " <b> 5.3.4. </b> "
 ### 2. Tìm Access Control List
 - Cuộn xuống và tìm ***Access Control List***:
   - Kiểm tra thấy Bucket owner enforced
-  - Có nghĩa ACL đang bị bắt 
+  - Có nghĩa ACL đang bị tắt 
   - Cần bật ACL trước để sử dụng ACL để làm công khai các objects
 ![find-ACL](/images/5-Workshop/5.3-Frontend-deployment/5.3.4-config-bucket-policy-public-object-access/find-ACL.png)
 ### 3. Bật ACL
