@@ -22,7 +22,7 @@ pre: " <b> 1.7. </b> "
 | 5 | - Hoàn thiện báo cáo thực tập | 06/08/2026 | 06/08/2026 | |
 | 6 | - Tiếp tục tìm hiểu các công nghệ AWS | 07/08/2026 | 07/08/2026 | <https://hcm-rules.awsfcaj.com/> |
 
-### Kết quả đạt được tuần 6:
+### Kết quả đạt được tuần 7:
 
 * Đã hoàn thành video demo giới thiệu website.
 * Đã kiểm tra và chỉnh sửa các lỗi trên Workshop.

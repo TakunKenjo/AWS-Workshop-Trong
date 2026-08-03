@@ -22,7 +22,7 @@ pre: " <b> 1.7. </b> "
 | 5 | - Complete the internship report | 06/08/2026 | 06/08/2026 | |
 | 6 | - Continue learning about AWS technologies | 07/08/2026 | 07/08/2026 | <https://hcm-rules.awsfcaj.com/> |
 
-### Results Achieved in Week 6:
+### Results Achieved in Week 7:
 
 * Completed the demo video introducing the website.
 * Checked and fixed errors in the Workshop.
