@@ -53,3 +53,6 @@ Tham gia chương trình **"Cloud Architect"** với vai trò khán giả là m�
 - **Không khí sự kiện thoải mái:** Dù là một cuộc thi đối kháng căng thẳng giữa các đội nhưng không khí tổng thể của buổi event lại cực kỳ thoải mái và tràn đầy năng lượng tích cực nhờ vào việc người dẫn chương trình (MC) được thay đổi liên tục suốt từ 9h sáng đến 12h30 trưa.
 
 - **Tính tương tác toàn diện và cơ hội cho khán giả:** Sự kiện không hề bỏ quên những người ngồi dưới khán đài. Người dẫn chương trình thường xuyên tương tác, đặt câu hỏi giao lưu trực tiếp và dành những phần quà cho khán giả. Điều này giúp em không chỉ đến để xem mà thực sự được tham gia, hòa mình vào cuộc thi và chủ động học hỏi cùng mọi người.
+![1](/images/4-EventParticipated/4.1-Event1/1.jpg)
+![2](/images/4-EventParticipated/4.1-Event1/2.jpg)
+

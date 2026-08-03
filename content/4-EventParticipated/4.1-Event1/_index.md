@@ -53,3 +53,5 @@ Participating in the **"Cloud Architect"** program as an audience member was a c
 - **Relaxed and Energetic Atmosphere:** Although the competition itself was highly competitive, the overall atmosphere remained enjoyable and energetic. One unique aspect was that the Master of Ceremonies (MC) changed throughout the event, from 9:00 AM until 12:30 PM, keeping the audience engaged and maintaining a lively environment.
 
 - **Excellent Audience Interaction:** The organizers did not overlook the audience. The MC frequently interacted with attendees by asking questions, encouraging participation, and giving away prizes. This allowed me not only to watch the competition but also to actively participate, immerse myself in the event, and learn together with everyone else.
+![1](/images/4-EventParticipated/4.1-Event1/1.jpg)
+![2](/images/4-EventParticipated/4.1-Event1/2.jpg)
