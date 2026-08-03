@@ -275,32 +275,6 @@
                 href="http://localhost:1313/AWS-Workshop-Trong/vi/1-worklog/1.7-week7/"
                 />
   </url><url>
-    <loc>http://localhost:1313/AWS-Workshop-Trong/vi/1-worklog/1.8-week8/</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/AWS-Workshop-Trong/1-worklog/1.8-week8/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://localhost:1313/AWS-Workshop-Trong/vi/1-worklog/1.8-week8/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/AWS-Workshop-Trong/vi/1-worklog/1.9-week9/</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/AWS-Workshop-Trong/1-worklog/1.9-week9/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://localhost:1313/AWS-Workshop-Trong/vi/1-worklog/1.9-week9/"
-                />
-  </url><url>
     <loc>http://localhost:1313/AWS-Workshop-Trong/vi/2-proposal/</loc>
     <lastmod>2026-07-23T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -403,45 +377,6 @@
                 rel="alternate"
                 hreflang="vi"
                 href="http://localhost:1313/AWS-Workshop-Trong/vi/5-workshop/5.4-backend-deployment/5.4.2-creating-amazon-dynamodb/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/AWS-Workshop-Trong/vi/1-worklog/1.10-week10/</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/AWS-Workshop-Trong/1-worklog/1.10-week10/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://localhost:1313/AWS-Workshop-Trong/vi/1-worklog/1.10-week10/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/AWS-Workshop-Trong/vi/1-worklog/1.11-week11/</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/AWS-Workshop-Trong/1-worklog/1.11-week11/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://localhost:1313/AWS-Workshop-Trong/vi/1-worklog/1.11-week11/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/AWS-Workshop-Trong/vi/1-worklog/1.12-week12/</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/AWS-Workshop-Trong/1-worklog/1.12-week12/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://localhost:1313/AWS-Workshop-Trong/vi/1-worklog/1.12-week12/"
                 />
   </url><url>
     <loc>http://localhost:1313/AWS-Workshop-Trong/vi/5-workshop/5.6-conclusion/5.6.3-next-steps/</loc>
